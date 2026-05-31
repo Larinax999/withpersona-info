@@ -1,0 +1,3094 @@
+{
+  "aamva_address_comparison": {
+    "name": "Postal Code",
+    "category": "fraud",
+    "description": "Detect if the postal code matches AAMVA.",
+    "type": "aamva",
+    "reasons": {
+      "aamva_error": "An error occurred accessing the AAMVA database.",
+      "insufficient_match": "The postal code provided did not sufficiently match AAMVA.",
+      "invalid_issuing_authority": "This issuing authority does not provide information to AAMVA.",
+      "skip_invalid_issuing_authority": "This issuing authority does not provide information to AAMVA."
+    }
+  },
+  "aamva_birthdate_comparison": {
+    "name": "Birthdate",
+    "category": "fraud",
+    "description": "Detect if the birthdate matches AAMVA.",
+    "type": "aamva",
+    "reasons": {
+      "aamva_error": "An error occurred accessing the AAMVA database.",
+      "insufficient_match": "The birthdate provided did not sufficiently match AAMVA.",
+      "invalid_issuing_authority": "This issuing authority does not provide information to AAMVA.",
+      "skip_invalid_issuing_authority": "This issuing authority does not provide information to AAMVA."
+    }
+  },
+  "aamva_expiration_date_comparison": {
+    "name": "Expiration Date",
+    "category": "fraud",
+    "description": "Detect if the expiration date matches AAMVA.",
+    "type": "aamva",
+    "reasons": {
+      "aamva_error": "An error occurred accessing the AAMVA database.",
+      "insufficient_match": "The expiration date provided did not sufficiently match AAMVA.",
+      "invalid_issuing_authority": "This issuing authority does not provide information to AAMVA.",
+      "skip_invalid_issuing_authority": "This issuing authority does not provide information to AAMVA.",
+      "state_not_supported": "This issuing authority does not provide this field to AAMVA"
+    }
+  },
+  "aamva_identification_number_comparison": {
+    "name": "Identification Number",
+    "category": "fraud",
+    "description": "Detect if the identification number matches AAMVA.",
+    "type": "aamva",
+    "reasons": {
+      "aamva_error": "An error occurred accessing the AAMVA database.",
+      "insufficient_match": "The identification number provided did not sufficiently match AAMVA.",
+      "invalid_issuing_authority": "This issuing authority does not provide information to AAMVA.",
+      "skip_invalid_issuing_authority": "This issuing authority does not provide information to AAMVA."
+    }
+  },
+  "aamva_identity_comparison": {
+    "name": "Identity Comparison",
+    "category": "fraud",
+    "description": "Detect if various properties match AAMVA.",
+    "type": "aamva",
+    "reasons": {
+      "high_risk": "One or more high risk attributes provided did not sufficiently match AAMVA.",
+      "medium_risk": "One or more medium risk attributes provided did not sufficiently match AAMVA.",
+      "missing_issuing_year": "The issuing year was not provided."
+    }
+  },
+  "aamva_issue_date_comparison": {
+    "name": "Issue Date",
+    "category": "fraud",
+    "description": "Detect if the issue date matches AAMVA.",
+    "type": "aamva",
+    "reasons": {
+      "aamva_error": "An error occurred accessing the AAMVA database.",
+      "insufficient_match": "The expiration date provided did not sufficiently match AAMVA.",
+      "invalid_issuing_authority": "This issuing authority does not provide information to AAMVA.",
+      "skip_invalid_issuing_authority": "This issuing authority does not provide information to AAMVA.",
+      "state_not_supported": "This issuing authority does not provide this field to AAMVA"
+    }
+  },
+  "aamva_name_comparison": {
+    "name": "Name",
+    "category": "fraud",
+    "description": "Detect if the full name matches AAMVA.",
+    "type": "aamva",
+    "reasons": {
+      "aamva_error": "An error occurred accessing the AAMVA database.",
+      "insufficient_match": "The name provided did not sufficiently match AAMVA.",
+      "invalid_issuing_authority": "This issuing authority does not provide information to AAMVA.",
+      "name_first_insufficient_match": "The first name failed to match AAMVA.",
+      "name_last_insufficient_match": "The last name failed to match AAMVA.",
+      "skip_invalid_issuing_authority": "This issuing authority does not provide information to AAMVA."
+    }
+  },
+  "aamva_service_available_detection": {
+    "name": "Service Available",
+    "category": "user_action_required",
+    "description": "Detect if the AAMVA service is available.",
+    "type": "aamva",
+    "reasons": {
+      "external_service_error": "An error occurred accessing the AAMVA service."
+    }
+  },
+  "bank_pennydrop_account_name_comparison": {
+    "name": "Name Comparison",
+    "category": "user_action_required",
+    "description": "Compare user-provided name with the name associated with the Bank Account.",
+    "type": "bank_pennydrop",
+    "reasons": {
+      "insufficient_match": "The user-provided name does not match the name associated with the Bank Account."
+    }
+  },
+  "bank_pennydrop_account_phone_number_comparison": {
+    "name": "Phone Number Comparison",
+    "category": "user_action_required",
+    "description": "Compares user-provided phone number with the phone number associated with the Bank Account.",
+    "type": "bank_pennydrop",
+    "reasons": {
+      "insufficient_match": "The user-provided phone number does not match the phone number associated with the Bank Account."
+    }
+  },
+  "bank_pennydrop_disallowed_country_detection": {
+    "name": "Allowed Country",
+    "category": "user_action_required",
+    "description": "Disallowed country code detection",
+    "type": "bank_pennydrop",
+    "reasons": {
+      "disallowed_country": "The country is not permitted according to the template requirements."
+    }
+  },
+  "bank_pennydrop_service_available_detection": {
+    "name": "Service Available",
+    "category": "user_action_required",
+    "description": "Detect if results from Bank Pennydrop are available.",
+    "type": "bank_pennydrop",
+    "reasons": {
+      "external_service_error": "An error occurred accessing Bank Pennydrop.",
+      "service_degraded": "Service is degraded."
+    }
+  },
+  "bank_pennydrop_valid_account_detection": {
+    "name": "Account Validation",
+    "category": "user_action_required",
+    "description": "Detect if the account is active.",
+    "type": "bank_pennydrop",
+    "reasons": {
+      "transaction_failed": "The account number provided is inactive or invalid."
+    }
+  },
+  "brand_asset_brand_association_detection": {
+    "name": "Brand Association Detection",
+    "category": "fraud",
+    "description": "Detect if the brand asset  matches the business website branding.",
+    "type": "brand_asset",
+    "reasons": {
+      "brand_match_score_below_threshold": "The brand asset  does not sufficiently match the website branding.",
+      "no_brand_matches_found": "No matching brand assets were found on the website.",
+      "analysis_unavailable": "We were unable to analyze the brand association.",
+      "unsupported_file_type": "The brand asset file type is not supported."
+    }
+  },
+  "brand_asset_shaft_compliance_detection": {
+    "name": "SHAFT Compliance Detection",
+    "category": "fraud",
+    "description": "Detect if the brand asset contains prohibited SHAFT content (Sex, Hate, Alcohol, Firearms, Tobacco).",
+    "type": "brand_asset",
+    "reasons": {
+      "sex_content_detected": "Sexual content was detected in the brand asset.",
+      "hate_content_detected": "Hate-related content was detected in the brand asset.",
+      "alcohol_content_detected": "Alcohol-related content was detected in the brand asset.",
+      "firearms_content_detected": "Firearms-related content was detected in the brand asset.",
+      "tobacco_content_detected": "Tobacco-related content was detected in the brand asset.",
+      "analysis_unavailable": "We were unable to analyze the brand asset for SHAFT content.",
+      "unsupported_file_type": "The brand asset file type is not supported."
+    }
+  },
+  "brand_asset_trademark_ownership_detection": {
+    "name": "Trademark Ownership Detection",
+    "category": "fraud",
+    "description": "Detect if the brand asset logo has potential trademark conflicts.",
+    "type": "brand_asset",
+    "reasons": {
+      "trademark_conflict_detected": "A potential trademark conflict was detected with the brand asset.",
+      "no_trademark_match_found": "No matching trademark registration was found for the brand asset.",
+      "analysis_unavailable": "We were unable to analyze the brand asset for trademark conflicts.",
+      "unsupported_file_type": "The brand asset file type is not supported."
+    }
+  },
+  "business_website_backlink_detection": {
+    "name": "Backlink Detection",
+    "category": "fraud",
+    "description": "Detect if a business website has sufficient backlinks.",
+    "type": "business_website",
+    "reasons": {
+      "below_threshold": "The website has insufficient backlinks."
+    }
+  },
+  "business_website_cookie_banner_detection": {
+    "name": "Cookie Banner Detection Check",
+    "category": "user_action_required",
+    "description": "Validates that the website has a compliant cookie banner with proper reject options and equal prominence of buttons.",
+    "type": "business_website",
+    "reasons": {
+      "no_cookie_banner": "No cookie banner was detected on the website.",
+      "no_reject_button": "The cookie banner does not have a reject or decline button.",
+      "unequal_buttons": "The cookie banner's accept and reject buttons are not of equal prominence."
+    }
+  },
+  "business_website_domain_age_detection": {
+    "name": "Domain Age Detection",
+    "category": "fraud",
+    "description": "Detect if the domain's age meets requirements.",
+    "type": "business_website",
+    "reasons": {
+      "domain_age_insufficient": "The domain's age does not meet requirements.",
+      "domain_age_unknown": "We were unable to determine the domain's age."
+    }
+  },
+  "business_website_domain_expiration_detection": {
+    "name": "Domain Expiration Detection",
+    "category": "fraud",
+    "description": "Detect if a domain's registration is expired or expiring soon.",
+    "type": "business_website",
+    "reasons": {
+      "domain_expiration_unknown": "We were unable to determine the domain's expiration date.",
+      "domain_expired": "The domain's registration is expired.",
+      "domain_in_expiration_window": "The domain's registration is expiring soon."
+    }
+  },
+  "business_website_domain_redirect_detection": {
+    "name": "Domain Redirect Detection",
+    "category": "fraud",
+    "description": "Detects if a URL redirects when visited",
+    "type": "business_website",
+    "reasons": {
+      "domain_redirected": "The input domain redirected to a different domain."
+    }
+  },
+  "business_website_domain_resolvable_detection": {
+    "name": "Domain Resolvable Detection",
+    "category": "fraud",
+    "description": "Detect if the domain can resolve to an IP address.",
+    "type": "business_website",
+    "reasons": {
+      "domain_unresolvable": "The domain does not resolve to an IP address."
+    }
+  },
+  "business_website_identity_comparison": {
+    "name": "Identity Comparison",
+    "category": "fraud",
+    "description": "Whether the information extracted from the business's website matches the inputted information",
+    "type": "business_website",
+    "reasons": {
+      "insufficient_content": "We were not able to extract enough information from the website.",
+      "insufficient_match": "The business website information did not match what was provided."
+    }
+  },
+  "business_website_malicious_website_detection": {
+    "name": "Malicious Website Detection",
+    "category": "fraud",
+    "description": "Detect if a business website is malicious.",
+    "type": "business_website",
+    "reasons": {
+      "malware": "The website has been flagged for likely containing malware.",
+      "social_engineering": "The website has been flagged for social engineering and/or phishing.",
+      "email_spam": "The website has been flagged as a source of email spam."
+    }
+  },
+  "business_website_privacy_policy_legitimacy_detection": {
+    "name": "Privacy Policy Legitimacy Detection",
+    "category": "fraud",
+    "description": "Detect if a business website has a legitimate Privacy Policy.",
+    "type": "business_website",
+    "reasons": {
+      "broken_link": "The Privacy Policy link is broken.",
+      "insufficient_content": "The Privacy Policy content is blank or insufficient.",
+      "error_page": "The Privacy Policy link leads to an error page.",
+      "placeholder_text": "The Privacy Policy content contains placeholder text.",
+      "unknown": "An unknown error occurred.",
+      "no_urls_found": "No URLs were found to check for Privacy Policy."
+    }
+  },
+  "business_website_sufficient_content_detection": {
+    "name": "Sufficient Content Detection",
+    "category": "fraud",
+    "description": "Detect if the website has sufficient content to extract information from",
+    "type": "business_website",
+    "reasons": {
+      "access_denied": "We were unable to access the website to extract information.",
+      "domain_parked": "The domain is registered but hosting placeholder content.",
+      "error_page": "We received an error page when we tried to visit the website.",
+      "insufficient_content": "The website did not have sufficient content to extract information"
+    }
+  },
+  "business_website_supported_domain_detection": {
+    "name": "Supported Platform",
+    "category": "fraud",
+    "description": "Verifies that the website platform is supported",
+    "type": "business_website",
+    "reasons": {
+      "unsupported_domain": "Platform is not currently supported."
+    }
+  },
+  "business_website_terms_of_service_legitimacy_detection": {
+    "name": "Terms of Service Legitimacy Detection",
+    "category": "fraud",
+    "description": "Detect if a business website has a legitimate Terms of Service.",
+    "type": "business_website",
+    "reasons": {
+      "broken_link": "The Terms of Service link is broken.",
+      "insufficient_content": "The Terms of Service content is blank or insufficient.",
+      "error_page": "The Terms of Service link leads to an error page.",
+      "placeholder_text": "The Terms of Service content contains placeholder text.",
+      "unknown": "An unknown error occurred.",
+      "no_urls_found": "No URLs were found to check for Terms of Service."
+    }
+  },
+  "business_website_valid_url_format_detection": {
+    "name": "Valid URL Format Detection",
+    "category": "user_action_required",
+    "description": "Validates that the website URL format is valid and processable.",
+    "type": "business_website",
+    "reasons": {
+      "invalid_url_format": "The website URL format is invalid.",
+      "email": "An email address was provided instead of a website URL."
+    }
+  },
+  "business_website_website_comparison": {
+    "name": "Website Comparison",
+    "category": "fraud",
+    "description": "Whether the information extracted from the business's website matches the inputted information.",
+    "type": "business_website",
+    "reasons": {
+      "domain_unresolvable": "The domain does not resolve to an IP address.",
+      "insufficient_content": "We were not able to extract enough information from the website.",
+      "insufficient_match": "The business website information did not match what was provided."
+    }
+  },
+  "certificate_korea_birthdate_comparison": {
+    "name": "Birthdate comparison",
+    "category": "fraud",
+    "description": "Detect if the birthdate matches what is associated with certificate.",
+    "type": "certificate_korea",
+    "reasons": {
+      "insufficient_issuing_information": "No birthdate associated with certificate.",
+      "insufficient_match": "The birthdate provided did not sufficiently match what is associated with certificate."
+    }
+  },
+  "certificate_korea_identification_number_comparison": {
+    "name": "Identification number comparison",
+    "category": "fraud",
+    "description": "Detect if the ID number matches what is associated with certificate.",
+    "type": "certificate_korea",
+    "reasons": {
+      "insufficient_issuing_information": "No identification number associated with certificate.",
+      "insufficient_match": "The identification number provided did not sufficiently match what is associated with certificate.",
+      "unsupported_for_certificate_type": "Comparison not supported for given certificate type."
+    }
+  },
+  "certificate_korea_name_comparison": {
+    "name": "Name comparison",
+    "category": "fraud",
+    "description": "Detect if the name matches what is associated with certificate.",
+    "type": "certificate_korea",
+    "reasons": {
+      "insufficient_issuing_information": "No name associated with certificate.",
+      "insufficient_match": "The name provided did not sufficiently match what is associated with certificate."
+    }
+  },
+  "certificate_korea_pki_failure_detection": {
+    "name": "PKI Validation",
+    "category": "fraud",
+    "description": "Detect if the digital certificate's Public Key Infrastructure is valid.",
+    "type": "certificate_korea",
+    "reasons": {
+      "ca_validation_failed": "The certificate and claimed attributes failed certificate authority's validation.",
+      "invalid_certificate": "The certificate is an invalid Korean digital certificate.",
+      "signature_verification_failed": "The digital signature provided does not match signature for certificate."
+    }
+  },
+  "credit_card_disallowed_country_detection": {
+    "name": "Allowed country",
+    "category": "user_action_required",
+    "description": "Detect if the credit card's country of origin is allowed based on template requirements.",
+    "type": "credit_card",
+    "reasons": {
+      "service_unavailable": "Service unavailable for country detection.",
+      "not_allowed_by_configuration": "The credit card's country is not allowed based on template requirements."
+    }
+  },
+  "credit_card_disallowed_type_detection": {
+    "name": "Allowed card type",
+    "category": "user_action_required",
+    "description": "Detect if the credit card's funding type and brand are allowed for age verification.",
+    "type": "credit_card",
+    "reasons": {
+      "service_unavailable": "Service unavailable for type detection.",
+      "restricted_payment_method": "The payment method type is not allowed for age verification.",
+      "restricted_funding_source": "The payment method funding source is not allowed for age verification."
+    }
+  },
+  "credit_card_name_comparison": {
+    "name": "Name comparison",
+    "category": "fraud",
+    "description": "Compare the submitted name with the account holder's name for verification.",
+    "type": "credit_card",
+    "reasons": {
+      "service_unavailable": "Service unavailable for name comparison.",
+      "insufficient_match": "The submitted name does not sufficiently match the account holder's name.",
+      "missing_name": "Required name information is missing for comparison."
+    }
+  },
+  "credit_card_service_available_detection": {
+    "name": "Service Available",
+    "category": "user_action_required",
+    "description": "Detect if the credit card service is available.",
+    "type": "credit_card",
+    "reasons": {
+      "external_service_error": "An error occurred accessing the credit card service."
+    }
+  },
+  "database_address_comparison": {
+    "name": "Address Comparison",
+    "category": "fraud",
+    "description": "Detect if the address matches a record in the authoritative or issuing databases.",
+    "type": "database",
+    "reasons": {
+      "insufficient_match": "The address provided did not sufficiently match a record in the authoritative or issuing databases.",
+      "not_required": "Address comparison was not required.",
+      "tin_check_passed": "Address comparison skipped due to TIN number submission."
+    }
+  },
+  "database_address_deliverable_detection": {
+    "name": "Deliverable address",
+    "category": "user_action_required",
+    "description": "Detect if the address is deliverable.",
+    "type": "database",
+    "reasons": {
+      "missing_secondary_information": "Part of the address (e.g. apt number) was missing",
+      "not_deliverable": "The address provided does not appear to be deliverable.",
+      "not_required": "Address deliverable check was not run."
+    }
+  },
+  "database_address_residential_detection": {
+    "name": "Residential address",
+    "category": "user_action_required",
+    "description": "Detect if the address is residential. When the `allowed_jurisdictions` config includes `university`, college campus addresses (dorms, on-campus annexes) also pass via an IPEDS / OpenStreetMap polygon lookup.",
+    "type": "database",
+    "reasons": {
+      "commercial_address": "The address provided appears to be commercial.",
+      "not_required": "Address residential check was not run.",
+      "unknown_address_type": "The address type provided is not known.",
+      "university_address": "Address is on or near a known US university campus."
+    }
+  },
+  "database_attribute_comparison": {
+    "name": "Attribute comparison",
+    "category": "fraud",
+    "description": "Verify that input values submitted for database verification match the claimed identity details provided during the verification flow. Flags cases where information may have changed mid-flow.",
+    "type": "database",
+    "reasons": {
+      "missing_properties": "Input or claimed attributes like name or birthdate are missing.",
+      "property_conflict": "Input attributes do not match what was claimed during this verification flow.",
+      "unsupported_comparison_language": "Input or claimed attributes include characters from an unsupported language."
+    }
+  },
+  "database_birthdate_comparison": {
+    "name": "Birthdate Comparison",
+    "category": "fraud",
+    "description": "Detect if the birthdate matches a record in the authoritative or issuing databases.",
+    "type": "database",
+    "reasons": {
+      "insufficient_match": "The birthdate provided did not sufficiently match a record in the authoritative or issuing databases.",
+      "not_required": "Birthdate comparison was not required.",
+      "tin_check_passed": "Birthdate comparison skipped due to TIN number submission."
+    }
+  },
+  "database_deceased_detection": {
+    "name": "Alive Detection",
+    "category": "user_action_required",
+    "description": "Detect if person is living.",
+    "type": "database",
+    "reasons": {
+      "not_required": "Deceased records check was not required.",
+      "person_is_deceased": "The information provided match the records of a deceased person.",
+      "unavailable_for_country": "The deceased records are unavailable for the country."
+    }
+  },
+  "database_email_address_comparison": {
+    "name": "Email Address Comparison",
+    "category": "fraud",
+    "description": "Detect if the email address matches a record in the authoritative or issuing databases.",
+    "type": "database",
+    "reasons": {
+      "insufficient_match": "The email address provided did not sufficiently match a record in the authoritative or issuing databases.",
+      "not_required": "Email address comparison was not required.",
+      "tin_check_passed": "Email address comparison skipped due to a passed TIN number submission."
+    }
+  },
+  "database_face_comparison": {
+    "name": "Face comparison",
+    "category": "fraud",
+    "description": "Detect if the face in the user-provided selfie matches the database source.",
+    "type": "database",
+    "reasons": {
+      "external_service_error": "Data source unavailable, timeouts, vendor error.",
+      "face_mismatch": "Face comparison result is not a match.",
+      "no_face_available": "Data source does not return a face image.",
+      "no_face_provided": "No selfie or govID image provided for comparison.",
+      "unsupported_country": "The selected country is not currently enabled for face comparison."
+    }
+  },
+  "database_identity_comparison": {
+    "name": "Identity Comparison",
+    "category": "fraud",
+    "description": "Detect if the identity matches a record in the authoritative or issuing databases.",
+    "type": "database",
+    "reasons": {
+      "property_conflict": "Claimed attributes do not match what was found on the identity record.",
+      "unsupported_country": "The selected country is not currently configured for this check."
+    }
+  },
+  "database_inquiry_comparison": {
+    "name": "Inquiry comparison",
+    "category": "fraud",
+    "description": "Compare if attributes on the inquiry are inconsistent with what was submitted.",
+    "type": "database",
+    "reasons": {
+      "missing_properties": "Inquiry details like name or birthdate are missing.",
+      "no_inquiry": "No associated inquiry.",
+      "property_conflict": "Attributes on the inquiry are inconsistent with what was submitted.",
+      "unsupported_comparison_language": "Comparison attributes include characters from an unsupported language."
+    }
+  },
+  "database_name_comparison": {
+    "name": "Name Comparison",
+    "category": "fraud",
+    "description": "Detect if the name matches a record in the authoritative or issuing databases.",
+    "type": "database",
+    "reasons": {
+      "insufficient_match": "The name provided did not sufficiently match a record in the authoritative or issuing databases.",
+      "not_required": "Name comparison was not required"
+    }
+  },
+  "database_phone_number_comparison": {
+    "name": "Phone Number Comparison",
+    "category": "fraud",
+    "description": "Detect if the phone number matches a record in the authoritative or issuing databases.",
+    "type": "database",
+    "reasons": {
+      "insufficient_match": "The phone number provided did not sufficiently match a record in the authoritative or issuing databases.",
+      "not_required": "Phone number comparison was not required.",
+      "tin_check_passed": "TIN record matched, but phone number comparison is not configurable for TIN."
+    }
+  },
+  "database_po_box_detection": {
+    "name": "P.O. Box Detection",
+    "category": "user_action_required",
+    "description": "Detect if the address is a PO box.",
+    "type": "database",
+    "reasons": {
+      "address_is_hc_box": "The address is a HC box.",
+      "address_is_non_us_territory": "The address is a non US territory.",
+      "address_is_po_box": "The address is a PO box.",
+      "missing_address": "No address was submitted."
+    }
+  },
+  "database_service_available_detection": {
+    "name": "Service Available",
+    "category": "user_action_required",
+    "description": "Detect if the service is available.",
+    "type": "database",
+    "reasons": {
+      "external_service_error": "An error occurred while accessing database sources."
+    }
+  },
+  "database_social_security_number_comparison": {
+    "name": "Identification Number Comparison",
+    "category": "fraud",
+    "description": "Detect if the identification number matches a record in the authoritative or issuing databases.",
+    "type": "database",
+    "reasons": {
+      "insufficient_match": "The identification number provided did not sufficiently match a record in the authoritative or issuing databases.",
+      "not_required": "identification number comparison was not required."
+    }
+  },
+  "database_two_plus_two_detection": {
+    "name": "2+2 Detection",
+    "category": "user_action_required",
+    "description": "Detect if claimed attributes passes 2+2 requirements.",
+    "type": "database",
+    "reasons": {
+      "insufficient_match": "The identity provided did not sufficiently match a record in the authoritative or issuing databases.",
+      "not_required": "2+2 detection was not required."
+    }
+  },
+  "database_aadhaar_birthdate_comparison": {
+    "name": "Birthdate comparison",
+    "category": "fraud",
+    "description": "Detect if the birthdate matches the Aadhaar database.",
+    "type": "database_aadhaar",
+    "reasons": {
+      "external_service_error": "An error occurred accessing the Aadhaar database.",
+      "insufficient_match": "The birthdate provided did not sufficiently match a record in the authoritative or issuing databases."
+    }
+  },
+  "database_aadhaar_consent_check": {
+    "name": "Consent check",
+    "category": "user_action_required",
+    "description": "Ensure the user gave consent to share Aadhaar data.",
+    "type": "database_aadhaar",
+    "reasons": {
+      "consent_declined": "The user did not consent to sharing Aadhaar data.",
+      "user_cancelled": "The user cancelled the Aadhaar verification process.",
+      "external_service_error": "An error occurred accessing the Aadhaar database."
+    }
+  },
+  "database_aadhaar_face_comparison": {
+    "name": "Face comparison",
+    "category": "fraud",
+    "description": "Detect if the face in the user-provided selfie matches the Aadhaar database.",
+    "type": "database_aadhaar",
+    "reasons": {
+      "external_service_error": "Error communicating with external face comparison service.",
+      "face_mismatch": "The face in the selfie does not match the face in the Aadhaar database.",
+      "no_selfie": "No selfie provided for face comparison.",
+      "comparison_attempt_unsuccessful": "Face comparison could not be completed successfully."
+    }
+  },
+  "database_aadhaar_name_comparison": {
+    "name": "Name comparison",
+    "category": "fraud",
+    "description": "Detect if the name matches the Aadhaar database.",
+    "type": "database_aadhaar",
+    "reasons": {
+      "external_service_error": "An error occurred accessing the Aadhaar database.",
+      "insufficient_match": "The name provided did not sufficiently match a record in the authoritative or issuing databases."
+    }
+  },
+  "database_business_active_business_detection": {
+    "name": "Active Business Detection",
+    "category": "fraud",
+    "description": "Detect if business is legally active.",
+    "type": "database_business",
+    "reasons": {
+      "identity_comparison_failed": "The identity provided did not sufficiently match a record and thus business inactivity could not be determined.",
+      "not_active": "The information provided matches the record of an inactive business."
+    }
+  },
+  "database_business_ai_identity_comparison": {
+    "name": "Business Identity Comparison using AI",
+    "category": "fraud",
+    "description": "Detect if the business identity matches a record in the authoritative or issuing databases using AI.",
+    "type": "database_business",
+    "reasons": {
+      "insufficient_match": "The identity provided did not sufficiently match a record in the authoritative or issuing databases."
+    }
+  },
+  "database_business_associated_persons_comparison": {
+    "name": "Associated Persons Comparison",
+    "category": "fraud",
+    "description": "Detect if the provided associated persons are found on a record in an authoritative source.",
+    "type": "database_business",
+    "reasons": {
+      "identity_comparison_failed": "The identity provided did not sufficiently match a record and thus associated persons inactivity could not be determined.",
+      "insufficient_data": "There was insufficient provided data to search for a record on file.",
+      "insufficient_match": "The provided associated persons did not sufficiently match the record on file.",
+      "invalid_position": "One or more of the provided associated persons had an invalid position."
+    }
+  },
+  "database_business_enabled_country_detection": {
+    "name": "Enabled Country Detection",
+    "category": "user_action_required",
+    "description": "Detect if the business's country is enabled based on template requirements.",
+    "type": "database_business",
+    "reasons": {
+      "country_not_enabled": "The business's country is not enabled based on template requirements."
+    }
+  },
+  "database_business_filing_status_type_detection": {
+    "name": "Filing Status Type Detection",
+    "category": "fraud",
+    "description": "Detect if the business operating status maps to a blocked filing status category.",
+    "type": "database_business",
+    "reasons": {
+      "blocked_operating_status": "The business operating status maps to a blocked filing status category."
+    }
+  },
+  "database_business_identity_comparison": {
+    "name": "Business Identity Comparison",
+    "category": "fraud",
+    "description": "Detect if the business identity matches a record in the authoritative or issuing databases.",
+    "type": "database_business",
+    "reasons": {
+      "insufficient_match": "The identity provided did not sufficiently match a record in the authoritative or issuing databases.",
+      "no_records_found": "The identity provided did not return a result in the authoritative or issuing databases.",
+      "waiting_for_additional_data": "Matching in progress, waiting for additional data from authoritative and issuing databases."
+    }
+  },
+  "database_business_registered_agent_address_detection": {
+    "name": "Registered Agent Address Detection",
+    "category": "fraud",
+    "description": "Detect if the submitted business address matches a registered agent address on the matched business record.",
+    "type": "database_business",
+    "reasons": {
+      "matched_agent_address": "The submitted address matches a registered agent address on the matched business record."
+    }
+  },
+  "database_business_service_available_detection": {
+    "name": "Service Available Detection",
+    "category": "user_action_required",
+    "description": "Detects if BRV vendors are available.",
+    "type": "database_business",
+    "reasons": {
+      "external_service_error": "An error occurred while accessing the BRV data sources."
+    }
+  },
+  "database_business_valid_registration_number_format": {
+    "name": "Valid Registration Number Format",
+    "category": "fraud",
+    "description": "Validate if the business registration number matches an applicable format.",
+    "type": "database_business",
+    "reasons": {
+      "insufficient_match": "The registration number provided did not match an applicable format."
+    }
+  },
+  "database_business_footprint_enabled_country_detection": {
+    "name": "Enabled Country Detection",
+    "category": "user_action_required",
+    "description": "Detect if the business's country is enabled based on template requirements.",
+    "type": "database_business_footprint",
+    "reasons": {
+      "country_not_enabled": "The business's country is not enabled based on template requirements."
+    }
+  },
+  "database_business_footprint_identity_comparison": {
+    "name": "Business Footprint Identity Comparison",
+    "category": "fraud",
+    "description": "Detect if the business identity matches a record in the footprint databases.",
+    "type": "database_business_footprint",
+    "reasons": {
+      "insufficient_match": "The identity provided did not sufficiently match a record in the footprint databases.",
+      "no_records_found": "The identity provided did not return a result in the footprint databases."
+    }
+  },
+  "database_ecbsv_death_record": {
+    "name": "Death Record",
+    "category": "fraud",
+    "description": "Detect if person found is deceased.",
+    "type": "database_ecbsv",
+    "reasons": {
+      "deceased": "The person found is deceased",
+      "external_service_error": "An error occurred accessing the eCBSV database",
+      "invalid_age": "The person's age is invalid for accessing the eCBSV database",
+      "invalid_ssn": "The person's SSN is invalid for accessing the eCBSV database",
+      "no_dmf_record": "No record was found in the Death Master File",
+      "not_checked": "Record was not found, check was not run"
+    }
+  },
+  "database_ecbsv_record_match": {
+    "name": "Record Matched",
+    "category": "fraud",
+    "description": "Detect if the record was matched in the database.",
+    "type": "database_ecbsv",
+    "reasons": {
+      "external_service_error": "An error occurred accessing the eCBSV database",
+      "insufficient_match": "The information provided did not sufficiently match any of the records",
+      "invalid_age": "The person's age is invalid for accessing the eCBSV database",
+      "invalid_ssn": "The person's SSN is invalid for accessing the eCBSV database",
+      "not_required": "This check is not required"
+    }
+  },
+  "database_ecbsv_service_available_detection": {
+    "name": "Service Available Detection",
+    "category": "user_action_required",
+    "description": "Detect if the eCBSV database is unavailable.",
+    "type": "database_ecbsv",
+    "reasons": {
+      "external_service_error": "An error occurred while accessing the eCBSV database."
+    }
+  },
+  "database_phone_carrier_address_comparison": {
+    "name": "Address",
+    "category": "fraud",
+    "description": "Detect if the address matches with phone carrier.",
+    "type": "database_phone_carrier",
+    "reasons": {
+      "external_service_error": "An error occurred accessing phone carrier database.",
+      "insufficient_match": "The address provided did not sufficiently match with phone carrier."
+    }
+  },
+  "database_phone_carrier_age_threshold_comparison": {
+    "name": "Age threshold",
+    "category": "user_action_required",
+    "description": "Detect if the user meets a specified age threshold.",
+    "type": "database_phone_carrier",
+    "reasons": {
+      "external_service_error": "An error occurred accessing phone carrier database.",
+      "info_not_found": "The phone number provided did not sufficiently match with phone carrier.",
+      "invalid_number": "The phone number provided was not valid.",
+      "not_above_age_threshold": "The user is below the age threshold.",
+      "phone_country_mismatch": "The phone number provided did not match the country provided."
+    }
+  },
+  "database_phone_carrier_birthdate_comparison": {
+    "name": "Birthdate",
+    "category": "fraud",
+    "description": "Detect if the birthdate matches with phone carrier.",
+    "type": "database_phone_carrier",
+    "reasons": {
+      "external_service_error": "An error occurred accessing phone carrier database.",
+      "insufficient_match": "The birthdate provided did not sufficiently match with phone carrier.",
+      "unavailable_for_country": "Phone carrier match for birthdate is unavailable for country."
+    }
+  },
+  "database_phone_carrier_name_first_comparison": {
+    "name": "First name",
+    "category": "fraud",
+    "description": "Detect if the first name matches with phone carrier.",
+    "type": "database_phone_carrier",
+    "reasons": {
+      "external_service_error": "An error occurred accessing phone carrier database.",
+      "insufficient_match": "The first name provided did not sufficiently match with phone carrier."
+    }
+  },
+  "database_phone_carrier_name_last_comparison": {
+    "name": "Last name",
+    "category": "fraud",
+    "description": "Detect if the last name matches with phone carrier.",
+    "type": "database_phone_carrier",
+    "reasons": {
+      "external_service_error": "An error occurred accessing phone carrier database.",
+      "insufficient_match": "The last name provided did not sufficiently match with phone carrier."
+    }
+  },
+  "database_phone_carrier_service_available_detection": {
+    "name": "Service Available Detection",
+    "category": "user_action_required",
+    "description": "Detect if the service is available",
+    "type": "database_phone_carrier",
+    "reasons": {
+      "external_service_error": "An error occurred accessing phone carrier database."
+    }
+  },
+  "database_serpro_birthdate_comparison": {
+    "name": "Birthdate comparison",
+    "category": "fraud",
+    "description": "Detect if the birthdate matches the Serpro database.",
+    "type": "database_serpro",
+    "reasons": {
+      "external_service_error": "An error occurred accessing the Serpro database.",
+      "insufficient_match": "The birthdate provided did not sufficiently match the Serpro identity record."
+    }
+  },
+  "database_serpro_cpf_comparison": {
+    "name": "CPF comparison",
+    "category": "fraud",
+    "description": "Detect if the CPF matches the Serpro database.",
+    "type": "database_serpro",
+    "reasons": {
+      "external_service_error": "An error occurred accessing the Serpro database.",
+      "insufficient_match": "The CPF provided did not sufficiently match the Serpro identity record.",
+      "invalid_cpf": "The CPF provided is invalid.",
+      "invalid_cpf_status": "The CPF provided has an invalid status."
+    }
+  },
+  "database_serpro_face_comparison": {
+    "name": "Face comparison",
+    "category": "fraud",
+    "description": "Detect if the face matches the Serpro database.",
+    "type": "database_serpro",
+    "reasons": {
+      "external_service_error": "An error occurred accessing the Serpro database.",
+      "face_image_more_than_one": "More than one face was detected in the image.",
+      "face_image_poor_quality": "The face image quality is too poor for comparison.",
+      "face_invalid_base64_encoding": "The face image has invalid base64 encoding.",
+      "face_invalid_image_format": "The face image format is invalid.",
+      "face_invalid_image_size": "The face image size is invalid.",
+      "face_not_found": "The face could not be found.",
+      "face_not_recognized": "The face could not be recognized",
+      "insufficient_match": "The face provided did not sufficiently match the Serpro identity record.",
+      "no_selfie_available": "Serpro did not have a face on file.",
+      "no_selfie_provided": "No face was provided to be matched against Serpro."
+    }
+  },
+  "database_serpro_name_comparison": {
+    "name": "Name comparison",
+    "category": "fraud",
+    "description": "Detect if the name matches the Serpro database.",
+    "type": "database_serpro",
+    "reasons": {
+      "external_service_error": "An error occurred accessing the Serpro database.",
+      "insufficient_match": "The name provided did not sufficiently match the Serpro identity record."
+    }
+  },
+  "database_serpro_service_available_detection": {
+    "name": "Service Available Detection",
+    "category": "user_action_required",
+    "description": "Detect if Serpro is unavailable.",
+    "type": "database_serpro",
+    "reasons": {
+      "external_service_error": "An error occurred accessing the Serpro database."
+    }
+  },
+  "database_standard_identity_comparison": {
+    "name": "Identity comparison",
+    "category": "fraud",
+    "description": "Detect if the identity matches a record.",
+    "type": "database_standard",
+    "reasons": {
+      "insufficient_data": "There was insufficient provided data to conduct a search in the non-authoritative database.",
+      "insufficient_match": "The identity provided did not sufficiently match a record in the non-authoritative database.",
+      "no_records_found": "The identity provided did not return a result in the non-authoritative database.",
+      "service_unavailable": "The requested service is currently unavailable. Please try again later.",
+      "unable_to_verify": "The attributes provided are not verifiable by the current configuration."
+    }
+  },
+  "database_tin_deceased_detection": {
+    "name": "Deceased Detection",
+    "category": "fraud",
+    "description": "Detect if the person is deceased. This check only applies when the TIN is successfully matched as an individual SSN.",
+    "type": "database_tin",
+    "reasons": {
+      "deceased_match": "The TIN and Name matched information on the Death Master File.",
+      "external_service_error": "An error occurred while accessing the IRS.",
+      "non_applicable_tin_type": "Unable to verify deceased status. This check requires a successful TIN match for an individual SSN."
+    }
+  },
+  "database_tin_disallowed_type_detection": {
+    "name": "Disallowed Type Detection",
+    "category": "fraud",
+    "description": "Detect if the TIN type (e.g. SSN, EIN, ITIN) submitted is not allowed based on template requirements.",
+    "type": "database_tin",
+    "reasons": {
+      "external_service_error": "An error occurred while accessing the IRS.",
+      "not_allowed_by_configuration": "Detect if the TIN type (e.g. SSN, EIN, ITIN) submitted is not allowed based on template requirements.",
+      "tin_type_not_detected": "The type of the given TIN number is not identifiable."
+    }
+  },
+  "database_tin_invalid_format_detection": {
+    "name": "Invalid Format Detection",
+    "category": "fraud",
+    "description": "Detect if the TIN format is invalid.",
+    "type": "database_tin",
+    "reasons": {
+      "external_service_error": "An error occurred while accessing the IRS.",
+      "tin_invalid_format": "TIN details do not match standard format.",
+      "tin_unissued": "TIN number is not currently issued."
+    }
+  },
+  "database_tin_name_comparison": {
+    "name": "Name comparison",
+    "category": "fraud",
+    "description": "Detect if the name matches the TIN.",
+    "type": "database_tin",
+    "reasons": {
+      "external_service_error": "An error occurred while accessing the IRS.",
+      "insufficient_match": "The name provided did not sufficiently match the TIN."
+    }
+  },
+  "database_tin_service_available_detection": {
+    "name": "Service Available Detection",
+    "category": "user_action_required",
+    "description": "Detect if the IRS is unavailable.",
+    "type": "database_tin",
+    "reasons": {
+      "external_service_error": "An error occurred while accessing the IRS.",
+      "record_temporarily_unavailable": "The record requested is temporarily unavailable, please try again later."
+    }
+  },
+  "database_vat_number_identity_comparison": {
+    "name": "Business Identity Comparison",
+    "category": "fraud",
+    "description": "Detect if the business identity matches a record in the authoritative or issuing databases.",
+    "type": "database_vat_number",
+    "reasons": {
+      "insufficient_match": "The identity provided did not sufficiently match a record in the authoritative or issuing databases.",
+      "no_records_found": "The identity provided did not return a result in the authoritative or issuing databases.",
+      "not_required": "Business identity comparison was not required."
+    }
+  },
+  "database_vat_number_service_available_detection": {
+    "name": "Service Available Detection",
+    "category": "user_action_required",
+    "description": "Detect if services for verifying VAT numbers are unavailable.",
+    "type": "database_vat_number",
+    "reasons": {
+      "external_service_error": "An error occurred while accessing services to verify the VAT number."
+    }
+  },
+  "database_vat_number_valid_detection": {
+    "name": "Valid Detection",
+    "category": "fraud",
+    "description": "Detect if the VAT number is valid.",
+    "type": "database_vat_number",
+    "reasons": {
+      "country_unsupported": "The provided country is not supported.",
+      "external_service_error": "An error occurred while accessing services to verify the VAT number.",
+      "invalid": "The VAT number is invalid."
+    }
+  },
+  "digital_id_connect_id_flow_completed_detection": {
+    "name": "Flow completed",
+    "category": "fraud",
+    "description": "Detect if the user completed the ConnectID flow.",
+    "type": "digital_id_connect_id",
+    "reasons": {
+      "flow_not_completed": "The user did not complete the ConnectID flow.",
+      "service_unavailable": "The ConnectID service is unavailable."
+    }
+  },
+  "digital_id_connect_id_service_available_detection": {
+    "name": "Service Available",
+    "category": "user_action_required",
+    "description": "Detect if results from Connect ID are available.",
+    "type": "digital_id_connect_id",
+    "reasons": {
+      "external_service_error": "An error occurred accessing Connect ID.",
+      "service_degraded": "Service is degraded."
+    }
+  },
+  "digital_id_e_do_app_flow_completed_detection": {
+    "name": "Flow completed",
+    "category": "fraud",
+    "description": "Detect if the user completed the eDoApp flow.",
+    "type": "digital_id_e_do_app",
+    "reasons": {
+      "flow_not_completed": "The user did not complete the eDoApp flow.",
+      "service_unavailable": "The eDoApp service is unavailable."
+    }
+  },
+  "digital_id_e_do_app_inquiry_comparison": {
+    "name": "Inquiry Comparison",
+    "category": "fraud",
+    "description": "Compare identity attributes from E-Do App against the inquiry.",
+    "type": "digital_id_e_do_app",
+    "reasons": {
+      "missing_properties": "Inquiry details like name or birthdate are missing.",
+      "names_swapped": "The first and last names appear to be swapped.",
+      "no_inquiry": "No associated inquiry.",
+      "property_conflict": "Identity attributes do not match what was submitted in the inquiry.",
+      "unsupported_comparison_language": "Comparison attributes include characters from an unsupported language."
+    }
+  },
+  "digital_id_e_do_app_service_available_detection": {
+    "name": "Service Available",
+    "category": "user_action_required",
+    "description": "Detect if results from eDO App are available.",
+    "type": "digital_id_e_do_app",
+    "reasons": {
+      "external_service_error": "An error occurred accessing eDO App."
+    }
+  },
+  "digital_id_finnish_trust_network_inquiry_comparison": {
+    "name": "Inquiry Comparison",
+    "category": "fraud",
+    "description": "Compare identity attributes from Finnish Trust Network against the inquiry.",
+    "type": "digital_id_finnish_trust_network",
+    "reasons": {
+      "missing_properties": "Inquiry details like name or birthdate are missing.",
+      "names_swapped": "The first and last names appear to be swapped.",
+      "no_inquiry": "No associated inquiry.",
+      "property_conflict": "Identity attributes do not match what was submitted in the inquiry.",
+      "unsupported_comparison_language": "Comparison attributes include characters from an unsupported language."
+    }
+  },
+  "digital_id_finnish_trust_network_service_available_detection": {
+    "name": "Service Available",
+    "category": "user_action_required",
+    "description": "Detect if results from the Finnish Trust Network are available.",
+    "type": "digital_id_finnish_trust_network",
+    "reasons": {
+      "external_service_error": "An error occurred accessing the Finnish Trust Network."
+    }
+  },
+  "digital_id_france_identite_inquiry_comparison": {
+    "name": "Inquiry Comparison",
+    "category": "fraud",
+    "description": "Compare identity attributes from France Identité against the inquiry.",
+    "type": "digital_id_france_identite",
+    "reasons": {
+      "missing_properties": "Inquiry details like name or birthdate are missing.",
+      "names_swapped": "The first and last names appear to be swapped.",
+      "no_inquiry": "No associated inquiry.",
+      "property_conflict": "Identity attributes do not match what was submitted in the inquiry.",
+      "unsupported_comparison_language": "Comparison attributes include characters from an unsupported language."
+    }
+  },
+  "digital_id_france_identite_service_available_detection": {
+    "name": "Service Available",
+    "category": "user_action_required",
+    "description": "Detect if results from France Identite are available.",
+    "type": "digital_id_france_identite",
+    "reasons": {
+      "external_service_error": "An error occurred accessing France Identite.",
+      "service_degraded": "Service is degraded."
+    }
+  },
+  "digital_id_generic_inquiry_comparison": {
+    "name": "Inquiry Comparison",
+    "category": "fraud",
+    "description": "Compare identity attributes from EID Easy against the inquiry.",
+    "type": "digital_id_generic",
+    "reasons": {
+      "missing_properties": "Inquiry details like name or birthdate are missing.",
+      "names_swapped": "The first and last names appear to be swapped.",
+      "no_inquiry": "No associated inquiry.",
+      "property_conflict": "Identity attributes do not match what was submitted in the inquiry.",
+      "unsupported_comparison_language": "Comparison attributes include characters from an unsupported language."
+    }
+  },
+  "digital_id_generic_service_available_detection": {
+    "name": "Service Available",
+    "category": "user_action_required",
+    "description": "Detect if results from the relevant Digital ID provider are available.",
+    "type": "digital_id_generic",
+    "reasons": {
+      "external_service_error": "An error occurred accessing the relevant Digital ID provider.",
+      "service_degraded": "Service is degraded."
+    }
+  },
+  "digital_id_idin_flow_completed_detection": {
+    "name": "Flow completed",
+    "category": "fraud",
+    "description": "Detect if the user completed the iDIN flow.",
+    "type": "digital_id_idin",
+    "reasons": {
+      "flow_not_completed": "The user did not complete the iDIN flow.",
+      "service_unavailable": "The iDIN service is unavailable."
+    }
+  },
+  "digital_id_idin_inquiry_comparison": {
+    "name": "Inquiry Comparison",
+    "category": "fraud",
+    "description": "Compare identity attributes from iDIN against the inquiry.",
+    "type": "digital_id_idin",
+    "reasons": {
+      "missing_properties": "Inquiry details like name or birthdate are missing.",
+      "names_swapped": "The first and last names appear to be swapped.",
+      "no_inquiry": "No associated inquiry.",
+      "property_conflict": "Identity attributes do not match what was submitted in the inquiry.",
+      "unsupported_comparison_language": "Comparison attributes include characters from an unsupported language."
+    }
+  },
+  "digital_id_idin_service_available_detection": {
+    "name": "Service Available",
+    "category": "user_action_required",
+    "description": "Detect if results from the iDIN service are available.",
+    "type": "digital_id_idin",
+    "reasons": {
+      "external_service_error": "An error occurred accessing the iDIN service."
+    }
+  },
+  "digital_id_its_me_flow_completed_detection": {
+    "name": "Flow completed",
+    "category": "fraud",
+    "description": "Detect if the user completed the ItsMe flow.",
+    "type": "digital_id_its_me",
+    "reasons": {
+      "flow_not_completed": "The user did not complete the ItsMe flow.",
+      "service_unavailable": "The ItsMe service is unavailable."
+    }
+  },
+  "digital_id_its_me_inquiry_comparison": {
+    "name": "Inquiry Comparison",
+    "category": "fraud",
+    "description": "Compare identity attributes from itsme against the inquiry.",
+    "type": "digital_id_its_me",
+    "reasons": {
+      "missing_properties": "Inquiry details like name or birthdate are missing.",
+      "names_swapped": "The first and last names appear to be swapped.",
+      "no_inquiry": "No associated inquiry.",
+      "property_conflict": "Identity attributes do not match what was submitted in the inquiry.",
+      "unsupported_comparison_language": "Comparison attributes include characters from an unsupported language."
+    }
+  },
+  "digital_id_its_me_service_available_detection": {
+    "name": "Service Available",
+    "category": "user_action_required",
+    "description": "Detect if results from the itsme service are available.",
+    "type": "digital_id_its_me",
+    "reasons": {
+      "external_service_error": "An error occurred accessing the itsme service."
+    }
+  },
+  "digital_id_kcb_credit_card_flow_completed_detection": {
+    "name": "Flow completed",
+    "category": "fraud",
+    "description": "Detect if the user completed the KCB credit card identity verification flow.",
+    "type": "digital_id_kcb_credit_card",
+    "reasons": {
+      "flow_not_completed": "The user did not complete the KCB credit card flow.",
+      "service_unavailable": "The KCB service is unavailable."
+    }
+  },
+  "digital_id_kcb_credit_card_inquiry_comparison": {
+    "name": "Inquiry Comparison",
+    "category": "fraud",
+    "description": "Compare identity attributes from KCB against the inquiry.",
+    "type": "digital_id_kcb_credit_card",
+    "reasons": {
+      "missing_properties": "Inquiry details like name or birthdate are missing.",
+      "no_inquiry": "No associated inquiry.",
+      "property_conflict": "Identity attributes do not match what was submitted in the inquiry.",
+      "unsupported_comparison_language": "Comparison attributes include characters from an unsupported language."
+    }
+  },
+  "digital_id_kcb_credit_card_service_available_detection": {
+    "name": "Service Available",
+    "category": "user_action_required",
+    "description": "Detect if results from the KCB service are available.",
+    "type": "digital_id_kcb_credit_card",
+    "reasons": {
+      "external_service_error": "An error occurred accessing the KCB service."
+    }
+  },
+  "digital_id_mit_id_flow_completed_detection": {
+    "name": "Flow completed",
+    "category": "fraud",
+    "description": "Detect if the user completed the MitID flow.",
+    "type": "digital_id_mit_id",
+    "reasons": {
+      "flow_not_completed": "The user did not complete the MitID flow.",
+      "service_unavailable": "The MitID service is unavailable."
+    }
+  },
+  "digital_id_mit_id_inquiry_comparison": {
+    "name": "Inquiry Comparison",
+    "category": "fraud",
+    "description": "Compare identity attributes from MitID against the inquiry.",
+    "type": "digital_id_mit_id",
+    "reasons": {
+      "missing_properties": "Inquiry details like name or birthdate are missing.",
+      "names_swapped": "The first and last names appear to be swapped.",
+      "no_inquiry": "No associated inquiry.",
+      "property_conflict": "Identity attributes do not match what was submitted in the inquiry.",
+      "unsupported_comparison_language": "Comparison attributes include characters from an unsupported language."
+    }
+  },
+  "digital_id_mit_id_service_available_detection": {
+    "name": "Service Available",
+    "category": "user_action_required",
+    "description": "Detect if results from the MitID service are available.",
+    "type": "digital_id_mit_id",
+    "reasons": {
+      "external_service_error": "An error occurred accessing the MitID service."
+    }
+  },
+  "digital_id_one_id_flow_completed_detection": {
+    "name": "Flow completed",
+    "category": "fraud",
+    "description": "Detect if the user completed the OneID flow.",
+    "type": "digital_id_one_id",
+    "reasons": {
+      "flow_not_completed": "The user did not complete the OneID flow.",
+      "service_unavailable": "The OneID service is unavailable."
+    }
+  },
+  "digital_id_one_id_inquiry_comparison": {
+    "name": "Inquiry Comparison",
+    "category": "fraud",
+    "description": "Compare identity attributes from OneID against the inquiry.",
+    "type": "digital_id_one_id",
+    "reasons": {
+      "missing_properties": "Inquiry details like name or birthdate are missing.",
+      "names_swapped": "The first and last names appear to be swapped.",
+      "no_inquiry": "No associated inquiry.",
+      "property_conflict": "Identity attributes do not match what was submitted in the inquiry.",
+      "unsupported_comparison_language": "Comparison attributes include characters from an unsupported language."
+    }
+  },
+  "digital_id_one_id_service_available_detection": {
+    "name": "Service Available",
+    "category": "user_action_required",
+    "description": "Detect if results from the OneID service are available.",
+    "type": "digital_id_one_id",
+    "reasons": {
+      "external_service_error": "An error occurred accessing the OneID service."
+    }
+  },
+  "digital_id_philsys_identity_comparison": {
+    "name": "Identity Comparison",
+    "category": "user_action_required",
+    "description": "Verify the user's identity using the PhilSys ID service.",
+    "type": "digital_id_philsys",
+    "reasons": {
+      "invalid_qr_code": "The provided QR code is invalid or unreadable.",
+      "invalid_signature": "The QR code signature could not be verified.",
+      "pcn_not_active": "The PhilSys Card Number (PCN) is not active.",
+      "service_degraded": "The PhilSys ID service is experiencing degraded performance.",
+      "unsupported_philsys_version": "The PhilSys version is not supported.",
+      "unsupported_signature_algorithm": "The signature algorithm used is not supported.",
+      "front_side_qr_code_detected": "The front side of the PhilSys ID was presented instead of the back side."
+    }
+  },
+  "digital_id_philsys_service_available_detection": {
+    "name": "Service Available",
+    "category": "user_action_required",
+    "description": "Detect if results from PhilSys ID are available.",
+    "type": "digital_id_philsys",
+    "reasons": {
+      "external_service_error": "An error occurred accessing the PhilSys ID service.",
+      "service_degraded": "The PhilSys ID service is experiencing degraded performance."
+    }
+  },
+  "digital_id_serpro_account_comparison": {
+    "name": "Account Comparison",
+    "category": "fraud",
+    "description": "Compare identity attributes from the Serpro QR against the account.",
+    "type": "digital_id_serpro",
+    "reasons": {
+      "missing_properties": "Account details like name or birthdate are missing.",
+      "names_swapped": "The first and last names appear to be swapped.",
+      "no_account": "No account associated with this verification.",
+      "property_conflict": "Identity attributes do not match the account details.",
+      "unsupported_comparison_language": "Comparison attributes include characters from an unsupported language."
+    }
+  },
+  "digital_id_serpro_identity_comparison": {
+    "name": "Identity comparison",
+    "category": "fraud",
+    "description": "Verify the user's identity using the Serpro service.",
+    "type": "digital_id_serpro",
+    "reasons": {
+      "invalid_cpf": "Provided CPF is invalid",
+      "invalid_qr_code_image": "Provided QR code image is invalid",
+      "service_unavailable": "The service is unavailable.",
+      "unable_to_verify": "The user's identity could not be verified."
+    }
+  },
+  "digital_id_serpro_inquiry_comparison": {
+    "name": "Inquiry Comparison",
+    "category": "fraud",
+    "description": "Compare identity attributes from the Serpro QR against the inquiry.",
+    "type": "digital_id_serpro",
+    "reasons": {
+      "missing_properties": "Inquiry details like name or birthdate are missing.",
+      "names_swapped": "The first and last names appear to be swapped.",
+      "no_inquiry": "No associated inquiry.",
+      "property_conflict": "Identity attributes do not match what was submitted in the inquiry.",
+      "unsupported_comparison_language": "Comparison attributes include characters from an unsupported language."
+    }
+  },
+  "digital_id_serpro_selfie_comparison": {
+    "name": "Selfie comparison",
+    "category": "fraud",
+    "description": "Compare if the face portrait stored with Serpro and the selfie provided are different faces.",
+    "type": "digital_id_serpro",
+    "reasons": {
+      "face_mismatch": "The face portrait stored with Serpro and the selfie provided appear to be different faces.",
+      "no_serpro_selfie": "The face portrait stored with Serpro is not available.",
+      "service_unavailable": "The service is unavailable.",
+      "unable_to_verify": "The selfie could not be verified."
+    }
+  },
+  "digital_id_serpro_service_available_detection": {
+    "name": "Service available",
+    "category": "user_action_required",
+    "description": "Detect if results from Serpro are available.",
+    "type": "digital_id_serpro",
+    "reasons": {
+      "external_service_error": "An error occurred accessing Serpro."
+    }
+  },
+  "digital_id_singpass_flow_completed_detection": {
+    "name": "Flow completed",
+    "category": "fraud",
+    "description": "Detect if the user completed the Singpass flow.",
+    "type": "digital_id_singpass",
+    "reasons": {
+      "flow_not_completed": "The user did not complete the Singpass flow."
+    }
+  },
+  "digital_id_singpass_service_available_detection": {
+    "name": "Service Available",
+    "category": "user_action_required",
+    "description": "Detect if results from Singpass are available.",
+    "type": "digital_id_singpass",
+    "reasons": {
+      "external_service_error": "An error occurred accessing Singpass.",
+      "service_degraded": "Service is degraded."
+    }
+  },
+  "digital_id_swedish_bank_id_inquiry_comparison": {
+    "name": "Inquiry Comparison",
+    "category": "fraud",
+    "description": "Compare identity attributes from Swedish Bank ID against the inquiry.",
+    "type": "digital_id_swedish_bank_id",
+    "reasons": {
+      "missing_properties": "Inquiry details like name or birthdate are missing.",
+      "names_swapped": "The first and last names appear to be swapped.",
+      "no_inquiry": "No associated inquiry.",
+      "property_conflict": "Identity attributes do not match what was submitted in the inquiry.",
+      "unsupported_comparison_language": "Comparison attributes include characters from an unsupported language."
+    }
+  },
+  "digital_id_swedish_bank_id_service_available_detection": {
+    "name": "Service Available",
+    "category": "user_action_required",
+    "description": "Detect if results from Swedish Bank ID are available.",
+    "type": "digital_id_swedish_bank_id",
+    "reasons": {
+      "external_service_error": "An error occurred accessing Swedish Bank ID.",
+      "service_degraded": "Service is degraded."
+    }
+  },
+  "digital_id_uk_sharecode_expired_detection": {
+    "name": "Expired detection",
+    "category": "fraud",
+    "description": "Detect if user is able to work in the UK within the dates specified on the sharecode result.",
+    "type": "digital_id_uk_sharecode",
+    "reasons": {
+      "date_not_found": "Relevant dates are missing from the sharecode result.",
+      "right_to_work_disallowed": "The user is not able to work in the UK.",
+      "right_to_work_expired": "The user's right to work in the UK has expired.",
+      "right_to_work_not_started": "The user's right to work in the UK has not started.",
+      "service_unavailable": "The service is unavailable."
+    }
+  },
+  "digital_id_uk_sharecode_identity_comparison": {
+    "name": "Identity comparison",
+    "category": "fraud",
+    "description": "Compare the sharecode data from the user with the right to work data from the UK Sharecode service.",
+    "type": "digital_id_uk_sharecode",
+    "reasons": {
+      "expired_sharecode": "The sharecode has expired.",
+      "immigration_sharecode_not_enabled": "An immigration sharecode was provided but immigration status checking is not enabled.",
+      "invalid_sharecode_or_birthdate": "The sharecode or birthdate is invalid.",
+      "new_sharecode_required": "A new sharecode is required from the user.",
+      "service_unavailable": "The service is unavailable."
+    }
+  },
+  "digital_id_uk_sharecode_name_comparison": {
+    "name": "Name comparison",
+    "category": "fraud",
+    "description": "Compare the inputted name with the name from the UK Sharecode service.",
+    "type": "digital_id_uk_sharecode",
+    "reasons": {
+      "insufficient_match": "The inputted name and the name from the UK Sharecode service do not match.",
+      "missing_name": "Inputted name or name from the UK Sharecode service is missing.",
+      "right_to_work_disallowed": "The user is not able to work in the UK.",
+      "service_unavailable": "The service is unavailable."
+    }
+  },
+  "digital_id_uk_sharecode_right_to_reside_detection": {
+    "name": "Right to Reside",
+    "category": "fraud",
+    "description": "Detect if the user has the right to reside in the UK based on their immigration status.",
+    "type": "digital_id_uk_sharecode",
+    "reasons": {
+      "immigration_not_checked": "Immigration status was not checked.",
+      "right_to_reside_disallowed": "The user does not have the right to reside in the UK.",
+      "service_unavailable": "The service is unavailable."
+    }
+  },
+  "digital_id_uk_sharecode_right_to_work_detection": {
+    "name": "Right to Work",
+    "category": "fraud",
+    "description": "Detect if the user is able to work in the UK.",
+    "type": "digital_id_uk_sharecode",
+    "reasons": {
+      "conditional_right_to_work": "The user has a conditional right to work in the UK.",
+      "immigration_sharecode_provided": "An immigration sharecode was provided instead of a right to work sharecode.",
+      "right_to_work_comparison_not_made": "The comparison between the inputted sharecode and the Sharecode service was not made.",
+      "right_to_work_disallowed": "The user is not able to work in the UK.",
+      "service_unavailable": "The service is unavailable."
+    }
+  },
+  "digital_id_uk_sharecode_service_available_detection": {
+    "name": "Service Available",
+    "category": "user_action_required",
+    "description": "Detect if the UK share code service is available.",
+    "type": "digital_id_uk_sharecode",
+    "reasons": {
+      "external_service_error": "An error occurred accessing the UK share code service."
+    }
+  },
+  "digital_id_world_id_flow_completed_detection": {
+    "name": "Flow completed detection",
+    "category": "user_action_required",
+    "description": "Detects if the user has completed the World ID flow.",
+    "type": "digital_id_world_id",
+    "reasons": {}
+  },
+  "digital_id_world_id_service_available_detection": {
+    "name": "Service Available",
+    "category": "user_action_required",
+    "description": "Detect if results from World ID are available.",
+    "type": "digital_id_world_id",
+    "reasons": {
+      "external_service_error": "An error occurred accessing World ID.",
+      "service_degraded": "Service is degraded."
+    }
+  },
+  "document_color_mode_detection": {
+    "name": "Color mode detection",
+    "category": "fraud",
+    "description": "This check identifies the color mode of the document.",
+    "type": "document",
+    "reasons": {
+      "color": "The document is in color.",
+      "grayscale": "The document is in grayscale.",
+      "black_and_white": "The document is in black and white.",
+      "inapplicable_file_type": "The document is an unsupported file type."
+    }
+  },
+  "document_compromised_detection": {
+    "name": "Compromised submission",
+    "category": "fraud",
+    "description": "Detect if the submission can be found from a publicly available source (e.g. Google Images).",
+    "type": "document",
+    "reasons": {
+      "publicly_available": "The submission exists in publicly available sources."
+    }
+  },
+  "document_custom_detection": {
+    "name": "Custom detection",
+    "category": "fraud",
+    "description": "Customizable detection",
+    "type": "document",
+    "reasons": {
+      "matched": "Detected a match based on configuration",
+      "not_enabled": "The verification check is not enabled."
+    }
+  },
+  "document_digital_text_modification_detection": {
+    "name": "Digital text modification detection",
+    "category": "fraud",
+    "description": "This check identifies any digitally modified text in the document.",
+    "type": "document",
+    "reasons": {
+      "inconclusive_result": "The check errored out or could not be completed.",
+      "modified_text": "The document contains modified text."
+    }
+  },
+  "document_enhanced_fraud_detection": {
+    "name": "Enhanced fraud detection",
+    "category": "fraud",
+    "description": "This check identifies fraud signals in the document.",
+    "type": "document",
+    "reasons": {
+      "fraud_detected": "The document contains a significant number of fraudulent indicators."
+    }
+  },
+  "document_expired_detection": {
+    "name": "Expired detection",
+    "category": "validity",
+    "description": "Ensure the document is not expired",
+    "type": "document",
+    "reasons": {
+      "EXPIRED": "Document has expired.",
+      "no_expiration_date": "Document is missing an expiration date."
+    }
+  },
+  "document_extracted_properties_detection": {
+    "name": "Extracted properties detection",
+    "category": "validity",
+    "description": "Ensure document contains required extractions.",
+    "type": "document",
+    "reasons": {
+      "match": "Matches were found for all patterns.",
+      "match_missing": "The submission is missing a match pattern.",
+      "no_configured_match": "No configured patterns to match."
+    }
+  },
+  "document_fabrication_detection": {
+    "name": "Fabrication detection",
+    "category": "fraud",
+    "description": "Detects if the document has been fabricated.",
+    "type": "document",
+    "reasons": {
+      "fabricated": "Document is fabricated."
+    }
+  },
+  "document_handwriting_detection": {
+    "name": "Handwriting detection",
+    "category": "fraud",
+    "description": "Detect if handwriting is in the document.",
+    "type": "document",
+    "reasons": {
+      "handwriting_detected": "Handwriting was detected.",
+      "signature_detected": "Signature was detected."
+    }
+  },
+  "document_image_copy_move_detection": {
+    "name": "Copy move detection",
+    "category": "fraud",
+    "description": "This check identifies any evidence of copy-move forgery in the submitted document image.",
+    "type": "document",
+    "reasons": {
+      "copy_move_detected": "The image shows evidence of copy-move modification.",
+      "inapplicable_file_type": "The submission does not contain any applicable images.",
+      "unsupported_image_type": "The submission is a screenshot or a scanned image. Copy-move detection does not currently support these image types."
+    }
+  },
+  "document_image_inconsistent_timestamp_detection": {
+    "name": "Image inconsistent timestamp detection",
+    "category": "fraud",
+    "description": "Detect if the image has inconsistent timestamps.",
+    "type": "document",
+    "reasons": {
+      "backdated_timestamps_detected": "The image contains timestamps that are backdated.",
+      "created_date_after_edit_detected": "The image has a creation timestamp that occurs after a modification timestamp.",
+      "future_timestamps_detected": "The image contains timestamps that occur in the future.",
+      "inapplicable_file_type": "The submission is not an image.",
+      "missing_timestamps": "The image is missing required timestamp information.",
+      "modified_date_detected": "The image contains a modification timestamp."
+    }
+  },
+  "document_image_suspicious_metadata_detection": {
+    "name": "Image suspicious metadata detection",
+    "category": "fraud",
+    "description": "This check identifies any irregular or modification timestamps on an image.",
+    "type": "document",
+    "reasons": {
+      "authored_image": "The image metadata shows evidence of image modification.",
+      "composite_image": "The image metadata shows evidence of image modification.",
+      "editor_detected": "The image metadata shows evidence of image modification.",
+      "inapplicable_file_type": "The submission does not contain any applicable images.",
+      "inconsistent_image_size": "The image metadata shows evidence of image modification."
+    }
+  },
+  "document_inconsistent_timestamp_detection": {
+    "name": "Inconsistent timestamp detection",
+    "category": "fraud",
+    "description": "This check identifies any irregular or modification timestamps on a PDF.",
+    "type": "document",
+    "reasons": {
+      "backdated_timestamps_detected": "The PDF contains timestamps that are backdated.",
+      "created_date_after_edit_detected": "The PDF has a creation timestamp that occurs after a modification timestamp.",
+      "future_timestamps_detected": "The PDF contains timestamps that occur in the future.",
+      "inapplicable_file_type": "The submission does not contain any applicable PDFs.",
+      "missing_timestamps": "The PDF is missing creation or modification timestamps.",
+      "modified_date_detected": "The PDF contains a modification timestamp."
+    }
+  },
+  "document_jpeg_modification_detection": {
+    "name": "JPEG modification detection",
+    "category": "fraud",
+    "description": "Detect if the JPEG has been modified.",
+    "type": "document",
+    "reasons": {
+      "inapplicable_file_type": "The submission is not a JPEG.",
+      "invalid_jpeg": "The JPEG is invalid.",
+      "jpeg_modification": "The JPEG has been modified.",
+      "no_configured_match": "No configured match was found.",
+      "unknown_error": "An unknown error occurred.",
+      "unsupported_image_type": "The image type is unsupported."
+    }
+  },
+  "document_jpeg_original_image_detection": {
+    "name": "JPEG original image detection",
+    "category": "fraud",
+    "description": "Detect inconsistencies in JPEG image compression to detect if image has been modified; does not apply to screenshots or scanned images.",
+    "type": "document",
+    "reasons": {
+      "inapplicable_file_type": "The submission is not a JPEG image.",
+      "invalid_jpeg": "The submission is not a valid JPEG image.",
+      "jpeg_not_original_image": "The JPEG shows evidence of having been modified.",
+      "unknown_error": "An unknown error has occurred.",
+      "unsupported_image_type": "The submission is a screenshot or a scanned image. JPEG modification detection does not currently support these image types."
+    }
+  },
+  "document_pdf_abnormal_font_detection": {
+    "name": "PDF abnormal font detection",
+    "category": "fraud",
+    "description": "Detects if the PDF contains font(s) that are considered an outlier relative to other fonts in the document. Font outliers in PDF metadata are common signs of an editor being used.",
+    "type": "document",
+    "reasons": {
+      "abnormal_font_detected": "The document contains fonts that appear abnormal.",
+      "inapplicable_file_type": "The submission is not a PDF."
+    }
+  },
+  "document_pdf_annotation_detection": {
+    "name": "PDF annotation detection",
+    "category": "fraud",
+    "description": "Detect if the PDF contains disallowed annotation subtypes.",
+    "type": "document",
+    "reasons": {
+      "disallowed_annotation_subtype": "The document contains annotations with disallowed subtypes.",
+      "inapplicable_file_type": "The submission is not a PDF."
+    }
+  },
+  "document_pdf_content_type_detection": {
+    "name": "PDF content type detection",
+    "category": "fraud",
+    "description": "Detect whether or not the PDF contains strictly typical content pages, image based pages, or a mix of both.",
+    "type": "document",
+    "reasons": {
+      "disallowed_content_type": "The document contains pages with disallowed content types.",
+      "inapplicable_file_type": "The submission is not a PDF."
+    }
+  },
+  "document_pdf_editor_detection": {
+    "name": "PDF editor detection",
+    "category": "fraud",
+    "description": "Detect if the PDF has signs of a document editor.",
+    "type": "document",
+    "reasons": {
+      "inapplicable_file_type": "The submission is not a PDF.",
+      "missing_info": "An editor could not be detected for the PDF.",
+      "risky_document_editor": "The document showed signs of being modified by a document editor."
+    }
+  },
+  "document_pdf_inconsistent_timestamp_detection": {
+    "name": "PDF inconsistent timestamp detection",
+    "category": "fraud",
+    "description": "Detect if the PDF has inconsistent timestamps.",
+    "type": "document",
+    "reasons": {
+      "backdated_timestamps_detected": "The PDF has backdated timestamps.",
+      "created_date_after_edit_detected": "The PDF has a created date after the edit date.",
+      "future_timestamps_detected": "The PDF has future timestamps.",
+      "inapplicable_file_type": "The submission is not a PDF.",
+      "missing_timestamps": "The PDF has no timestamps.",
+      "modified_date_detected": "The PDF has a modified date."
+    }
+  },
+  "document_pdf_modification_detection": {
+    "name": "PDF modification detection",
+    "category": "fraud",
+    "description": "Detect if the PDF has been modified after creation.",
+    "type": "document",
+    "reasons": {
+      "inapplicable_file_type": "The submission is not a PDF.",
+      "inconsistent_timestamps": "The creation date and modification date of the PDF are different.",
+      "missing_info": "We could not detect any PDF specific information.",
+      "modified_pdf_structure": "The internal PDF structure suggests that the PDF has been modified after creation.",
+      "unexpected_pdf_structure": "The internal PDF structure cannot be scanned for signs of modification."
+    }
+  },
+  "document_pdf_timestamp_inconsistency_detection": {
+    "name": "PDF timestamp inconsistency detection",
+    "category": "fraud",
+    "description": "Detect if the PDF has inconsistent timestamps.",
+    "type": "document",
+    "reasons": {
+      "inconsistent_timestamp": "The PDF has inconsistent timestamps.",
+      "no_pdf_timestamps": "The PDF has no timestamps."
+    }
+  },
+  "document_portrait_detection": {
+    "name": "Portrait detection",
+    "category": "biometrics",
+    "description": "Detect if there is face in the submission.",
+    "type": "document",
+    "reasons": {
+      "not_enabled": "The verification check is not enabled.",
+      "portrait_not_found": "The submission is missing a face."
+    }
+  },
+  "document_qr_code_detection": {
+    "name": "QR Code Detection",
+    "category": "validity",
+    "description": "Detects and validates QR codes in documents. Fails when no QR codes are detected or when detected QR codes are unreadable.",
+    "type": "document",
+    "reasons": {
+      "qr_not_detected": "No QR codes were detected in the document.",
+      "qr_not_decoded": "QR codes were detected but could not be decoded or contain blank data.",
+      "qr_not_valid": "QR codes were detected but are not valid for data extraction."
+    }
+  },
+  "document_recency_detection": {
+    "name": "Recency / Effective detection",
+    "category": "validity",
+    "description": "Detect if the document is recent.",
+    "type": "document",
+    "reasons": {
+      "invalid_issue_date": "The submission has an invalid issue date.",
+      "no_configuration": "No recency configuration.",
+      "no_issue_date": "The submission is missing an issue date.",
+      "not_recent": "Document is not recent enough."
+    }
+  },
+  "document_selfie_comparison": {
+    "name": "Document selfie comparison",
+    "category": "biometrics",
+    "description": "Compare if the face portrait on the document and the selfie are different faces.",
+    "type": "document",
+    "reasons": {
+      "face_mismatch": "The face portrait on the document and the selfie appear to be different faces.",
+      "no_portrait": "A face portrait was not found on the document.",
+      "no_selfie": "The submission has no selfie."
+    }
+  },
+  "document_social_security_card_version": {
+    "name": "Social Security Card Version",
+    "category": "validity",
+    "description": "This check determines if the social security card is consistent with the version.",
+    "type": "document",
+    "reasons": {
+      "pre_nov_2006_name_two_lines": "Pre-November 2006 card format detected but name appears on two lines.",
+      "pre_nov_2006_issue_date_present": "Pre-November 2006 card format detected but issue date appears on front.",
+      "pre_nov_2006_gold_usa_present": "Pre-November 2006 card format detected but gold USA is present.",
+      "nov_2006_name_two_lines": "November 2006 card format detected but name appears on two lines.",
+      "nov_2006_issue_date_missing": "November 2006 card format detected but issue date is missing from front.",
+      "nov_2006_gold_usa_present": "November 2006 card format detected but gold USA is present.",
+      "post_oct_2007_name_one_line": "Post-October 2007 card format detected but name appears on one line.",
+      "post_oct_2007_issue_date_missing": "Post-October 2007 card format detected but issue date is missing from front.",
+      "post_oct_2007_gold_usa_missing": "Post-October 2007 card format detected but gold USA is missing.",
+      "inapplicable_document_type": "The document is not a Social Security card.",
+      "name_extraction_missing": "Name could not be extracted from the document.",
+      "version_extraction_missing": "Card version could not be determined.",
+      "version_invalid": "Card version is invalid."
+    }
+  },
+  "document_synthetic_content_detection": {
+    "name": "Synthetic content detection",
+    "category": "fraud",
+    "description": "Detects synthetic documents by identifying common placeholder entities (e.g. John Doe) and mock document details (e.g. 12345678). This check leverages OCR-extracted text to flag documents typically used for demonstrations or testing purposes.",
+    "type": "document",
+    "reasons": {
+      "synthetic_content_detected": "The document contains common placeholder entities and/or mock document details."
+    }
+  },
+  "document_tamper_detection": {
+    "name": "Document image tampering",
+    "category": "fraud",
+    "description": "Detect if the submission shows evidence of being edited by a photo editor.",
+    "type": "document",
+    "reasons": {
+      "exif_inconsistency": "The submission has inconsistencies in the file metadata.",
+      "image_manipulated": "The submission appears to have been tampered by an editor.",
+      "inapplicable_file_type": "The submission is not an image."
+    }
+  },
+  "document_template_detection": {
+    "name": "Template detection",
+    "category": "fraud",
+    "description": "Detect if the document was contructed from a fraudulent template available online.",
+    "type": "document",
+    "reasons": {
+      "template_matched": "The document matches characteristics of a template available online.."
+    }
+  },
+  "document_type_detection": {
+    "name": "Type detection",
+    "category": "validity",
+    "description": "Detect if the document one of the expected types.",
+    "type": "document",
+    "reasons": {
+      "no_configuration": "No type configuration.",
+      "type_mismatch": "The submission is not one of the expected types."
+    }
+  },
+  "document_unprocessable_submission_detection": {
+    "name": "Processable submission",
+    "category": "validity",
+    "description": "Detect if the submission is unprocessable (e.g. malformed document).",
+    "type": "document",
+    "reasons": {
+      "submission_invalid": "The submission is unprocessable."
+    }
+  },
+  "document_vin_checksum_detection": {
+    "name": null,
+    "category": null,
+    "description": null,
+    "type": null,
+    "reasons": {
+      "no_configuration": "",
+      "no_vin_number": ""
+    }
+  },
+  "email_address_confirmation_code_comparison": {
+    "name": "Code confirmation",
+    "category": "user_action_required",
+    "description": "Compare provided code with the one sent to email address.",
+    "type": "email_address",
+    "reasons": {
+      "insufficient_match": "The code provided did not match with the one sent to email address.",
+      "too_many_retries": "Too many incorrect attempts."
+    }
+  },
+  "email_address_invalid_email_format_detection": {
+    "name": "Invalid Email Format Detection",
+    "category": "user_action_required",
+    "description": "Detect formatting errors on the provided email address",
+    "type": "email_address",
+    "reasons": {
+      "invalid_email_format": "The target email address has an invalid format."
+    }
+  },
+  "email_address_timeout_detection": {
+    "name": "Confirmation code timeout",
+    "category": "user_action_required",
+    "description": "Confirmation code is submitted within the alloted time",
+    "type": "email_address",
+    "reasons": {
+      "confirmation_timeout": "The code provided was not submited in the alloted time."
+    }
+  },
+  "id_aamva_database_lookup": {
+    "name": "AAMVA database lookup",
+    "category": "fraud",
+    "description": "Detect if the ID details match an entry in the AAMVA database.",
+    "type": "id",
+    "reasons": {
+      "aamva_server_error": "AAMVA database is temporarily unavailable.",
+      "insufficient_match": "ID details did not sufficiently match an entry in the AAMVA database.",
+      "invalid_country": "AAMVA database is not available for the given country.",
+      "invalid_id_type": "ID type is not supported by AAMVA.",
+      "invalid_issuing_authority": "AAMVA database is not available for this jurisdiction.",
+      "missing_barcode_extraction": "Barcode on the ID was decoded and thus was not run against the AAMVA database.",
+      "missing_required_attributes": "ID is missing required details to run against the AAMVA database."
+    }
+  },
+  "id_account_comparison": {
+    "name": "Account comparison",
+    "category": "fraud",
+    "description": "Compare if government ID details (e.g. name, birthdate) are consistent with account details.",
+    "type": "id",
+    "reasons": {
+      "face_mismatch": "Face is inconsistent with the selfie found on the account.",
+      "missing_properties": "Missing properties for account comparison.",
+      "names_swapped": "The claimed first name matches the extracted last name and vice versa.",
+      "no_account": "No account associated with this verification.",
+      "property_conflict": "ID properties are inconsistent with the account details.",
+      "unsupported_comparison_language": "Comparison attributes include characters from an unsupported language."
+    }
+  },
+  "id_age_comparison": {
+    "name": "Age comparison",
+    "category": "user_action_required",
+    "description": "Detect if the age listed on the ID meets the age restriction.",
+    "type": "id",
+    "reasons": {
+      "failed_requirement": "ID details do not meet age requirements.",
+      "missing_birthdate": "The birthdate is missing.",
+      "no_configuration": "The verification does not have an age comparison configuration."
+    }
+  },
+  "id_age_inconsistency_detection": {
+    "name": "Portrait age",
+    "category": "fraud",
+    "description": "Detect if the age listed on the ID is different than the age estimated from the face portrait.",
+    "type": "id",
+    "reasons": {
+      "inconsistent_age": "The age listed on the ID appears to be different than the age estimated from the face portrait.",
+      "missing_age_range": "The age range is missing.",
+      "missing_birthdate": "The birth date is missing.",
+      "missing_face": "The ID has no face.",
+      "missing_issuing_date": "The issue date is missing."
+    }
+  },
+  "id_attribute_comparison": {
+    "name": "Attribute comparison",
+    "category": "fraud",
+    "description": "Compare if government ID details (e.g. name, birthdate) are consistent with provided values. Generally used for verifications created outside an inquiry.",
+    "type": "id",
+    "reasons": {
+      "missing_properties": "Claimed attributes like name or birthdate are missing.",
+      "property_conflict": "ID properties are inconsistent with the provided values.",
+      "unsupported_comparison_language": "Claimed or extracted attributes include characters from an unsupported language."
+    }
+  },
+  "id_barcode_detection": {
+    "name": "Barcode",
+    "category": "user_action_required",
+    "description": "Detect if there is a barcode on the ID.",
+    "type": "id",
+    "reasons": {
+      "back_missing": "Unsuccessful detection of the back of the ID.",
+      "barcode_not_decoded": "The barcode on the ID cannot be decoded.",
+      "barcode_not_detected": "The barcode on the ID is not found.",
+      "barcode_not_required": "The barcode was not collected.",
+      "unsupported_country": "This check is not currently supported for this country."
+    }
+  },
+  "id_barcode_inconsistency_detection": {
+    "name": "Barcode inconsistency",
+    "category": "fraud",
+    "description": "Detect inconsistencies in the barcode on the ID.",
+    "type": "id",
+    "reasons": {
+      "back_missing": "Unsuccessful detection of the back of the ID.",
+      "barcode_not_decoded": "The barcode on the ID cannot be decoded.",
+      "barcode_not_detected": "The barcode on the ID is not found.",
+      "field_invalid": "The barcode has fields in invalid formats.",
+      "format_invalid": "The barcode does not follow ID specifications.",
+      "issuer_invalid": "The barcode specifies an issuer that is invalid.",
+      "issuer_mismatch": "The barcode has inconsistent issuer information.",
+      "metadata_invalid": "Barcode metadata is inconsistent with genuine IDs from the provided issuer.",
+      "required_field_missing": "The barcode is missing required fields.",
+      "revision_invalid": "Barcode revision is inconsistent with genuine IDs from the provided issuer.",
+      "unsupported_country": "This check is not currently supported for this country."
+    }
+  },
+  "id_blur_detection": {
+    "name": "Blur",
+    "category": "user_action_required",
+    "description": "Detect if the submission is blurry.",
+    "type": "id",
+    "reasons": {
+      "too_blurry": "The submission is blurry."
+    }
+  },
+  "id_color_inconsistency_detection": {
+    "name": "Color",
+    "category": "fraud",
+    "description": "Detect if the colors on the ID are different than the expected colors.",
+    "type": "id",
+    "reasons": {
+      "image_is_monochrome": "The colors detected on the ID appear to be monochromatic."
+    }
+  },
+  "id_compromised_detection": {
+    "name": "Compromised submission",
+    "category": "fraud",
+    "description": "Detect if the submission can be found from a publicly available source (e.g. Google Images).",
+    "type": "id",
+    "reasons": {
+      "fraudulent": "The ID is reported as fraudulent.",
+      "publicly_available": "The ID is likely a sample ID or publicly available.",
+      "sample_document": "The ID contains a word that indicates it is a sample."
+    }
+  },
+  "id_corner_detection": {
+    "name": "Corner detection",
+    "category": "user_action_required",
+    "description": "Detect if the submitted ID is fully in frame with all four corners visible.",
+    "type": "id",
+    "reasons": {
+      "insufficient_padding": "The ID is too close to the edge of the image.",
+      "unidentified": "The ID could not be identified.",
+      "unsupported_country": "The country is not supported by this check.",
+      "unsupported_document_type": "The type of ID is not supported by this check."
+    }
+  },
+  "id_custom_detection": {
+    "name": "Custom detection",
+    "category": "fraud",
+    "description": "Customizable detection",
+    "type": "id",
+    "reasons": {
+      "matched": "Detected a match based on configuration",
+      "not_enabled": "The verification check is not enabled."
+    }
+  },
+  "id_damaged_detection": {
+    "name": "Damaged detection",
+    "category": "fraud",
+    "description": "Detect physical damages on the ID that render it invalid for verification.",
+    "type": "id",
+    "reasons": {
+      "holepunch_detected": "A holepunch was detected on the ID.",
+      "defect_detected": "Clipped corners, cracks, or torn edges were detected on the ID."
+    }
+  },
+  "id_disallowed_country_detection": {
+    "name": "Allowed country",
+    "category": "user_action_required",
+    "description": "Detect if the country of the ID is not allowed based on template requirements.",
+    "type": "id",
+    "reasons": {
+      "no_country": "No country was extracted.",
+      "no_country_configuration": "All countries are allowed.",
+      "not_allowed_by_configuration": "The country of the ID is not allowed based on template requirements.",
+      "selected_country_mismatch": "The country of the ID does not match the country selected by the user."
+    }
+  },
+  "id_disallowed_type_detection": {
+    "name": "Allowed ID type",
+    "category": "user_action_required",
+    "description": "Detect if the ID type (e.g. driver license) submitted does not match the ID type the user selected.",
+    "type": "id",
+    "reasons": {
+      "disallowed_designation": "The ID has a designation that is not allowed based on template requirements.",
+      "not_allowed_by_configuration": "The ID type is not allowed based on template requirements.",
+      "restricted_type": "The ID type cannot be collected due to federal compliance requirements.",
+      "type_mismatch": "The ID type detected does not match the ID type the user selected.",
+      "type_not_detected": "The ID type of the submission could not be identified.",
+      "unrestricted": "There are no restrictions on ID type."
+    }
+  },
+  "id_double_side_detection": {
+    "name": "Double side",
+    "category": "user_action_required",
+    "description": "Detect if one side of the ID is submitted as both front and back.",
+    "type": "id",
+    "reasons": {
+      "side_submitted_twice": "The back and front submissions of the ID are of the same side.",
+      "single_sided": "The provided ID is expected to only have one side"
+    }
+  },
+  "id_electronic_replica_detection": {
+    "name": "Electronic replica",
+    "category": "fraud",
+    "description": "Detect if the submission is a replica of an image presented on another electronic device or screen.",
+    "type": "id",
+    "reasons": {
+      "digital_text_found": "The submission may contain digital text which is often found on a replica.",
+      "emulator_detected": "The submission may have been submitted on an emulator.",
+      "photocopy_found": "The submission may be a replica of a photocopy.",
+      "replica_detected": "The submission may be a generic replica.",
+      "rooted_device": "The submission may have been submitted on a rooted device.",
+      "screenshot_found": "The submission may be a replica of a screenshot.",
+      "virtual_camera_detected": "The submission may have been submitted using a virtual camera."
+    }
+  },
+  "id_entity_detection": {
+    "name": "Government ID",
+    "category": "user_action_required",
+    "description": "Detect if there is a government ID in the submission.",
+    "type": "id",
+    "reasons": {
+      "cannot_verify_id": "This submission does not appear to include a government ID."
+    }
+  },
+  "id_experimental_model_detection": {
+    "name": "Experimental",
+    "category": "fraud",
+    "description": "Experimental fraud checks.",
+    "type": "id",
+    "reasons": {
+      "match_detected": "A configured match was detected.",
+      "not_enabled": "The verification check is not enabled."
+    }
+  },
+  "id_expired_detection": {
+    "name": "Expiration",
+    "category": "user_action_required",
+    "description": "Detect if the ID is expired.",
+    "type": "id",
+    "reasons": {
+      "expired": "The ID is expired.",
+      "no_expiration_date": "The expiration date is missing."
+    }
+  },
+  "id_extracted_properties_detection": {
+    "name": "Extracted properties",
+    "category": "user_action_required",
+    "description": "Detect if template-required ID details are extracted.",
+    "type": "id",
+    "reasons": {
+      "no_required_properties": "The template is not configured to require extraction of certain properties.",
+      "property_not_extracted": "Required ID field(s) were not extracted.",
+      "name_partially_extracted": "First name and last name were required, but only one was extracted.",
+      "required_properties_absent_on_id": "The missing required properties are not present on the ID."
+    }
+  },
+  "id_extraction_inconsistency_detection": {
+    "name": "Extraction inconsistency",
+    "category": "fraud",
+    "description": "Detect if the details extracted from the front of the ID are different than the details extracted from the barcode.",
+    "type": "id",
+    "reasons": {
+      "back_missing": "Unsuccessful detection of the back of the ID.",
+      "missing_properties": "Barcode is missing properties to compare.",
+      "property_mismatch": "Details extracted from the front of the ID are different than the details extracted from the barcode.",
+      "unsupported_country": "This check is not currently supported for this country."
+    }
+  },
+  "id_fabrication_detection": {
+    "name": "Fabrication",
+    "category": "fraud",
+    "description": "Detect if the ID is likely to be fabricated, based on its format and issuing entity.",
+    "type": "id",
+    "reasons": {
+      "camouflage_passport": "The submitted ID is issued by an unrecognized or invalid government entity.",
+      "fabricated_id_version": "The submitted ID does not match a known in-circulation format of that ID type."
+    }
+  },
+  "id_glare_detection": {
+    "name": "Glare",
+    "category": "user_action_required",
+    "description": "Detect if the submission has glare.",
+    "type": "id",
+    "reasons": {
+      "too_much_glare": "The submission has glare."
+    }
+  },
+  "id_handwriting_detection": {
+    "name": "Handwriting",
+    "category": "fraud",
+    "description": "Detect if handwriting is found on the ID.",
+    "type": "id",
+    "reasons": {
+      "handwriting_found": "The ID appears to have handwriting on it."
+    }
+  },
+  "id_inconsistent_repeat_detection": {
+    "name": "Inconsistent repeat",
+    "category": "fraud",
+    "description": "Detect if either the ID details or face portrait match that of a previously submitted ID within the last year.",
+    "type": "id",
+    "reasons": {
+      "inconsistent_details": "The face portrait matches that of a previously submitted ID with different text attributes.",
+      "inconsistent_face": "The ID text attributes match that of a previously submitted ID with a different face portrait.",
+      "low_quality_portrait": "Portrait quality is too low for comparison.",
+      "no_portrait": "The face portrait is missing.",
+      "not_enabled": "Inconsistent repeat is not enabled."
+    }
+  },
+  "id_inquiry_comparison": {
+    "name": "Inquiry comparison",
+    "category": "fraud",
+    "description": "Compare if ID details like name or birthdate are inconsistent between different submission attempts.",
+    "type": "id",
+    "reasons": {
+      "missing_properties": "Inquiry details like name or birthdate are missing.",
+      "names_swapped": "The claimed first name matches the extracted last name and vice versa.",
+      "no_inquiry": "No associated inquiry.",
+      "property_conflict": "ID details like name or birthdate are inconsistent between different submission attempts.",
+      "unsupported_comparison_language": "Comparison attributes include characters from an unsupported language."
+    }
+  },
+  "id_mrz_detection": {
+    "name": "MRZ Detected",
+    "category": "user_action_required",
+    "description": "Detect if there is encoded, machine-readable text on the ID.",
+    "type": "id",
+    "reasons": {
+      "mrz_incomplete": "The full area of the encoded, machine-readable text on the ID was not detected.",
+      "mrz_not_found": "The encoded, machine-readable text on the ID is not found."
+    }
+  },
+  "id_mrz_inconsistency_detection": {
+    "name": "MRZ Inconsistency",
+    "category": "fraud",
+    "description": "Detect if the encoded, machine-readable text on the ID is well-formed.",
+    "type": "id",
+    "reasons": {
+      "mrz_checksum_invalid": "The encoded, machine-readable text on the ID has invalid checksum(s).",
+      "mrz_not_found": "The encoded, machine-readable text on the ID is not found.",
+      "mrz_not_verifiable": "The encoded, machine-readable text on the ID is present but not verifiable (e.g. because it may be partially obscured)."
+    }
+  },
+  "id_mrz_validation": {
+    "name": null,
+    "category": null,
+    "description": null,
+    "type": null,
+    "reasons": {
+      "mrz_not_found": "",
+      "mrz_checksum_invalid": ""
+    }
+  },
+  "id_number_format_inconsistency_detection": {
+    "name": "ID number format inconsistency",
+    "category": "fraud",
+    "description": "Detect if the ID number format is well-formed based on issuing authority rules for certain countries.",
+    "type": "id",
+    "reasons": {
+      "incorrect_format": "The ID number has an invalid format.",
+      "invalid_checksum": "The ID number has an invalid checksum.",
+      "invalid_encoded_data": "Data encoded in the ID number does not match data extracted from the ID.",
+      "unsupported_country": "This check is not currently supported for this country."
+    }
+  },
+  "id_paper_detection": {
+    "name": "Paper detection",
+    "category": "fraud",
+    "description": "Detect if the ID is a paper copy",
+    "type": "id",
+    "reasons": {
+      "paper_id_detected": "The submitted ID is printed on a piece of paper.",
+      "expected_paper_id_type": "The submitted ID type matches a known paper ID type."
+    }
+  },
+  "id_physical_tamper_detection": {
+    "name": "ID physical tampering",
+    "category": "fraud",
+    "description": "Detect if the submission is physically tampered.",
+    "type": "id",
+    "reasons": {
+      "tamper_detected": "The submission appears to have been tampered physically."
+    }
+  },
+  "id_po_box_detection": {
+    "name": "PO box",
+    "category": "user_action_required",
+    "description": "Detect if the address is a PO box. Note that address parts may be extracted both visually and from the barcode / MRZ.",
+    "type": "id",
+    "reasons": {
+      "address_is_hc_box": "The address is a HC box.",
+      "address_is_po_box": "The address is a PO box.",
+      "missing_address": "No address was submitted."
+    }
+  },
+  "id_portrait_clarity_detection": {
+    "name": "Portrait clarity",
+    "category": "user_action_required",
+    "description": "Detect if the face portrait is clear and in focus.",
+    "type": "id",
+    "reasons": {
+      "portrait_not_clear": "The face portrait is unclear and out of focus."
+    }
+  },
+  "id_portrait_detection": {
+    "name": "Portrait",
+    "category": "user_action_required",
+    "description": "Detect if there is a face portrait in the submission.",
+    "type": "id",
+    "reasons": {
+      "portrait_not_found": "The submission has no face portrait."
+    }
+  },
+  "id_public_figure_detection": {
+    "name": "Public figure",
+    "category": "fraud",
+    "description": "Detect if the face portrait matches that of a known public figure.",
+    "type": "id",
+    "reasons": {
+      "public_figure_detected": "The face portrait appears to match that of a known public figure.",
+      "low_quality_portrait": "Portrait quality is too low for comparison.",
+      "missing_face": "The ID has no face."
+    }
+  },
+  "id_real_id_detection": {
+    "name": "REAL ID",
+    "category": "user_action_required",
+    "description": "Detect if a U.S. REAL ID.",
+    "type": "id",
+    "reasons": {
+      "federal_limits_apply": "ID does not meet federal guidelines for REAL Enhanced IDs.",
+      "federal_limits_undetected": "ID's compliance type could not be detected.",
+      "invalid_barcode": "Barcode on ID could not be read.",
+      "invalid_country": "REAL ID is not available for the given country.",
+      "invalid_id_type": "ID type is not supported by REAL ID.",
+      "no_barcode": "ID's barcode was not provided."
+    }
+  },
+  "id_repeat_detection": {
+    "name": "Repeat",
+    "category": "fraud",
+    "description": "Detect if the ID details and face portrait match that of a previously submitted ID on a different account within the last year.",
+    "type": "id",
+    "reasons": {
+      "not_enabled": "ID repeat detection is not enabled.",
+      "repeat": "The ID details and face portrait match that of a previously submitted ID on a different account.",
+      "details_only_repeat": "The ID details match that of a previously submitted ID on a different account."
+    }
+  },
+  "id_required_property_detection": {
+    "name": null,
+    "category": null,
+    "description": null,
+    "type": null,
+    "reasons": {
+      "property_not_found": ""
+    }
+  },
+  "id_selfie_comparison": {
+    "name": "ID-to-Selfie comparison",
+    "category": "fraud",
+    "description": "Compare if the face portrait on the ID and the selfie are different faces.",
+    "type": "id",
+    "reasons": {
+      "face_mismatch": "The face portrait on the ID and the selfie appear to be different faces.",
+      "no_selfie": "The submission has no selfie."
+    }
+  },
+  "id_tamper_detection": {
+    "name": "ID image tampering",
+    "category": "fraud",
+    "description": "Detect if the submission is tampered by a photo editor.",
+    "type": "id",
+    "reasons": {
+      "exif_inconsistency": "The submission has inconsistencies in the file metadata.",
+      "image_manipulated": "The submission appears to have been tampered by an editor.",
+      "portrait_tampering": "The submission appears to have a tampered portrait."
+    }
+  },
+  "id_type_detection": {
+    "name": null,
+    "category": null,
+    "description": null,
+    "type": null,
+    "reasons": {
+      "layout_mismatch": ""
+    }
+  },
+  "id_unprocessable_submission_detection": {
+    "name": "Processable submission",
+    "category": "user_action_required",
+    "description": "Detect if the submission is unprocessable.",
+    "type": "id",
+    "reasons": {
+      "age_below_limit": "The age detected in the portrait is below the processable age limit.",
+      "submission_invalid": "The submission is unprocessable."
+    }
+  },
+  "id_valid_dates_detection": {
+    "name": "Valid dates",
+    "category": "fraud",
+    "description": "Detect if the dates on the ID are in violation of issuing authority rules. The check applies to US DLs and IDs, and CN IDs.",
+    "type": "id",
+    "reasons": {
+      "issuer_rules_inconsistency": "The dates on the ID appear to be in violation of issuing authority rules.",
+      "unknown_date_rules": "The ID is temporary or limited-term, so the valid date rules are unknown"
+    }
+  },
+  "id_video_quality_detection": {
+    "name": "Video quality",
+    "category": "user_action_required",
+    "description": "Detect if the video is high enough quality.",
+    "type": "id",
+    "reasons": {
+      "corrupt": "The video is corrupt.",
+      "low_bit_rate": "The bit rate is too low.",
+      "low_frame_rate": "The frame rate is too low.",
+      "not_found": "There was no video uploaded.",
+      "duration_too_short": "The duration of the video was too short."
+    }
+  },
+  "id_nfc_attribute_comparison": {
+    "name": "Attribute comparison",
+    "category": "fraud",
+    "description": "Compare if ID details like name or birthdate are inconsistent with claimed attributes.",
+    "type": "id_nfc",
+    "reasons": {
+      "missing_properties": "Claimed attributes like name or birthdate are missing.",
+      "names_swapped": "The claimed first and last name are swapped in regard to the ID details",
+      "no_claimed_attributes": "No claimed attributes available to be compared.",
+      "property_conflict": "ID details like name or birthdate are inconsistent with claimed attributes"
+    }
+  },
+  "id_nfc_disallowed_country_detection": {
+    "name": "Allowed Country",
+    "category": "user_action_required",
+    "description": "Detect if the ID's issuing country is not allowed based on template requirements.",
+    "type": "id_nfc",
+    "reasons": {
+      "no_country": "No country was extracted.",
+      "no_country_configuration": "All countries are allowed.",
+      "not_allowed_by_configuration": "The country of the ID is not allowed based on template requirements.",
+      "selected_country_mismatch": "The country of the ID does not match the country selected by the user."
+    }
+  },
+  "id_nfc_expired_detection": {
+    "name": "Expiration",
+    "category": "user_action_required",
+    "description": "Detect if the ID is expired.",
+    "type": "id_nfc",
+    "reasons": {
+      "dsc_certificate_expired": "The certificate of the ID is expired.",
+      "expired": "The ID is expired.",
+      "no_expiration_date": "The expiration date is missing."
+    }
+  },
+  "id_nfc_pki_failure_detection": {
+    "name": "PKI Validation",
+    "category": "fraud",
+    "description": "Detect if the ID's Public Key Infrastructure is valid.",
+    "type": "id_nfc",
+    "reasons": {
+      "ca_validation_failed": "The NFC data of the ID is not validated by the issuing authority.",
+      "dsc_validation_failed": "The NFC data of the ID is not signed correctly.",
+      "missing_doc_signing_certificate": "The NFC data of the ID is missing a signing certificate.",
+      "unsupported_certificate": "The submitted certificate is not supported."
+    }
+  },
+  "id_nfc_tamper_detection": {
+    "name": "Data tampering",
+    "category": "fraud",
+    "description": "Detects if the NFC data scanned from an ICAO compliant Travel Document has been tampered with.",
+    "type": "id_nfc",
+    "reasons": {
+      "chip_authentication_failed": "The NFC scan failed chip authentication.",
+      "dsc_dates_invalid": "The NFC data date format appears to be invalid.",
+      "dsc_issuer_invalid": "The NFC data issuer format appears to be invalid.",
+      "dsc_serial_number_invalid": "The NFC data serial number format appears to be invalid.",
+      "invalid_dg1_hash": "The NFC data format appears to be invalid.",
+      "invalid_dg2_hash": "The NFC data format appears to be invalid.",
+      "unparseable_data": "The NFC data format is unparseable."
+    }
+  },
+  "id_nfc_unprocessable_submission_detection": {
+    "name": "Processable Submission",
+    "category": "user_action_required",
+    "description": "Detect if the submission is unprocessable.",
+    "type": "id_nfc",
+    "reasons": {
+      "age_below_limit": "The age detected in the NFC data of the ID is below the processable age limit.",
+      "submission_invalid": "The submission is unprocessable."
+    }
+  },
+  "jp_my_number_nfc_scan_expired_detection": {
+    "name": "Expiration",
+    "category": "user_action_required",
+    "description": "Detects whether the scanned My Number card is expired.",
+    "type": "jp_my_number_nfc_scan",
+    "reasons": {
+      "service_degraded": "Service is degraded.",
+      "document_expired": "The card's expiration date is in the past.",
+      "no_expiration_data": "No expiration date was available from the scan result."
+    }
+  },
+  "jp_my_number_nfc_scan_service_available_detection": {
+    "name": "Service Available",
+    "category": "user_action_required",
+    "description": "Detects whether the NFC data verification service was reachable during processing.",
+    "type": "jp_my_number_nfc_scan",
+    "reasons": {
+      "external_service_error": "The NFC data verification service returned an unexpected error or was unreachable.",
+      "service_degraded": "Service is degraded."
+    }
+  },
+  "jp_my_number_nfc_scan_valid_scan_detection": {
+    "name": "Valid Scan",
+    "category": "user_action_required",
+    "description": "Verifies that the NFC scan result is structurally valid and cryptographically genuine.",
+    "type": "jp_my_number_nfc_scan",
+    "reasons": {
+      "service_degraded": "Service is degraded.",
+      "scan_failed": "The frontend reported a scan error (e.g. chip locked, NFC error, user cancelled).",
+      "invalid_operation": "The submitted operation is not in the template's supported operations.",
+      "missing_required_fields": "The scan result is missing required fields for the declared operation.",
+      "nonce_mismatch": "The nonce in the submitted result does not match the server-generated nonce.",
+      "verification_failed": "Data scanned from NFC chip could not be verified.",
+      "authentication_failed": "Data scanned from NFC chip could not be authenticated."
+    }
+  },
+  "mdoc_age_comparison": {
+    "name": "Age comparison",
+    "category": "user_action_required",
+    "description": "Detect if the age listed on the ID meets the age restriction.",
+    "type": "mdoc",
+    "reasons": {
+      "failed_requirement": "ID details do not meet age requirements.",
+      "missing_birthdate": "The birthdate is missing.",
+      "no_configuration": "The verification does not have an age comparison configuration."
+    }
+  },
+  "mdoc_digest_match_detection": {
+    "name": "Mdoc Digest Validation",
+    "category": "fraud",
+    "description": "Detect if the digests stored within the MSO data match the digests computed from the actual data.",
+    "type": "mdoc",
+    "reasons": {
+      "digest_mismatch": "The digests in the MSO data do not match the computed digests of the actual data.",
+      "validation_not_available": "The digest validation data is not available."
+    }
+  },
+  "mdoc_parseable_detection": {
+    "name": "Mdoc Parsed",
+    "category": "fraud",
+    "description": "Detect if the mdoc data could be successfully parsed and decrypted.",
+    "type": "mdoc",
+    "reasons": {
+      "mdoc_parse_failed": "The mdoc data could not be parsed or decrypted.",
+      "service_degraded": "Service is degraded."
+    }
+  },
+  "mdoc_valid_cert_detection": {
+    "name": "Mdoc Certificate Validation",
+    "category": "fraud",
+    "description": "Detect if the MSO certificate can be chained to a trusted root CA.",
+    "type": "mdoc",
+    "reasons": {
+      "cert_invalid": "The certificate could not be validated against a trusted root CA.",
+      "validation_not_available": "The certificate validation data is not available."
+    }
+  },
+  "mdoc_valid_device_authentication_detection": {
+    "name": "Mdoc Device Authentication Validation",
+    "category": "fraud",
+    "description": "Detect if the mdoc device authentication (DeviceSignature or DeviceMac) was verified, preventing cloning attacks per ISO 18013-5.",
+    "type": "mdoc",
+    "reasons": {
+      "device_authentication_invalid": "The device authentication could not be verified.",
+      "validation_not_available": "The device authentication validation data is not available."
+    }
+  },
+  "mdoc_valid_mso_data_detection": {
+    "name": "Mdoc MSO Data Validation",
+    "category": "fraud",
+    "description": "Detect if both the mobile security object (MSO) document type matches the actual mdoc data, and that the mso digest algorithm is allowed.",
+    "type": "mdoc",
+    "reasons": {
+      "mso_data_invalid": "The MSO data is inconsistent with the actual mdoc data.",
+      "validation_not_available": "The MSO data validation is not available."
+    }
+  },
+  "mdoc_valid_mso_signature_detection": {
+    "name": "Mdoc MSO Signature Validation",
+    "category": "fraud",
+    "description": "Detect if the MSO data signature could be verified, indicating the data has not been tampered with.",
+    "type": "mdoc",
+    "reasons": {
+      "mso_signature_invalid": "The MSO data signature could not be verified.",
+      "validation_not_available": "The MSO signature validation data is not available."
+    }
+  },
+  "persona_fff_inquiry_outcome_detection": {
+    "name": "Outcome",
+    "category": "fraud",
+    "description": "Detect the outcome of the FFF inquiry that backs this verification.",
+    "type": "persona_fff_inquiry",
+    "reasons": {
+      "inquiry_declined": "The FFF inquiry was declined.",
+      "inquiry_failed": "The FFF inquiry failed.",
+      "inquiry_needs_review": "The FFF inquiry is awaiting manual review.",
+      "inquiry_not_terminal": "The FFF inquiry has not reached a terminal funnel state."
+    }
+  },
+  "persona_fff_inquiry_service_available_detection": {
+    "name": "Service Available",
+    "category": "user_action_required",
+    "description": "Detect whether the internal admin API returned a result for the FFF inquiry.",
+    "type": "persona_fff_inquiry",
+    "reasons": {
+      "external_service_error": "An error occurred fetching the FFF inquiry.",
+      "service_degraded": "Service is degraded."
+    }
+  },
+  "persona_id_attribute_comparison": {
+    "name": "Attribute comparison",
+    "category": "fraud",
+    "description": "Validates that matches were found.",
+    "type": "persona_id",
+    "reasons": {
+      "property_conflict": "No matches were found."
+    }
+  },
+  "phone_number_address_comparison": {
+    "name": null,
+    "category": null,
+    "description": null,
+    "type": null,
+    "reasons": {
+      "insufficient_match": "",
+      "not_required": ""
+    }
+  },
+  "phone_number_birthdate_comparison": {
+    "name": null,
+    "category": null,
+    "description": null,
+    "type": null,
+    "reasons": {
+      "insufficient_match": "",
+      "not_required": ""
+    }
+  },
+  "phone_number_confirmation_code_comparison": {
+    "name": "Code confirmation",
+    "category": "user_action_required",
+    "description": "Compare provided code with the one sent to phone number.",
+    "type": "phone_number",
+    "reasons": {
+      "insufficient_match": "The code provided did not match with the one sent to phone number.",
+      "too_many_retries": "Too many incorrect attempts."
+    }
+  },
+  "phone_number_deliverable_detection": {
+    "name": "Deliverable Detection",
+    "category": "user_action_required",
+    "description": "Detect problems with sms deliverability for the provided phone number.",
+    "type": "phone_number",
+    "reasons": {
+      "landline_detected": "The receiving phone number is a landline."
+    }
+  },
+  "phone_number_disallowed_country_detection": {
+    "name": "Allowed country",
+    "category": "user_action_required",
+    "description": "Disallowed country code detection",
+    "type": "phone_number",
+    "reasons": {
+      "disallowed_country": "The phone number's country is not permitted according to the template requirements."
+    }
+  },
+  "phone_number_invalid_number_format_detection": {
+    "name": "Invalid Number Format Detection",
+    "category": "user_action_required",
+    "description": "Detect formatting errors on the provided phone number.",
+    "type": "phone_number",
+    "reasons": {
+      "invalid_number_format": "The receiving phone number has an invalid format."
+    }
+  },
+  "phone_number_name_comparison": {
+    "name": null,
+    "category": null,
+    "description": null,
+    "type": null,
+    "reasons": {
+      "insufficient_match": "",
+      "not_required": ""
+    }
+  },
+  "phone_number_phone_number_comparison": {
+    "name": null,
+    "category": null,
+    "description": null,
+    "type": null,
+    "reasons": {
+      "insufficient_match": "",
+      "not_required": ""
+    }
+  },
+  "phone_number_service_available_detection": {
+    "name": "Service Available Detection",
+    "category": "user_action_required",
+    "description": "Detect if the service is unavailable.",
+    "type": "phone_number",
+    "reasons": {
+      "external_service_error": "An error occurred while accessing the service.",
+      "unsupported_phone_number": "The inputted phone number is not supported",
+      "unsupported_region": "An unsupported region was inputted."
+    }
+  },
+  "phone_number_timeout_detection": {
+    "name": "Confirmation code timeout",
+    "category": "user_action_required",
+    "description": "Confirmation code is submitted within the allotted time",
+    "type": "phone_number",
+    "reasons": {
+      "confirmation_timeout": "The code provided was not submitted in the allotted time."
+    }
+  },
+  "phone_number_silent_network_authentication_deliverable_detection": {
+    "name": "Deliverable Detection",
+    "category": "user_action_required",
+    "description": "Detect if the phone number is deliverable through Silent Network Authentication (SNA). Some carriers (e.g., AT&T) may not be supported.",
+    "type": "phone_number_silent_network_authentication",
+    "reasons": {
+      "authentication_failed": "Silent network authentication cannot be completed.",
+      "device_timeout": "The device did not complete the silent authentication handshake within the configured client timeout.",
+      "device_phone_number_not_match": "The device phone number does not match the provided phone number.",
+      "device_not_cellular": "The device is not connected to a cellular network.",
+      "integration_error": "There is an error with the client sdk integration.",
+      "network_not_supported": "The Mobile Network Operator (MNO) is not supported, or the device is on a Virtual Private Network (VPN)."
+    }
+  },
+  "phone_number_silent_network_authentication_disallowed_country_detection": {
+    "name": "Allowed Country",
+    "category": "user_action_required",
+    "description": "Detect if the phone number's country is allowed. This check is restricted to the United States only.",
+    "type": "phone_number_silent_network_authentication",
+    "reasons": {
+      "disallowed_country": "The phone number's country is not permitted according to the template requirements."
+    }
+  },
+  "phone_number_silent_network_authentication_invalid_number_format_detection": {
+    "name": "Invalid Number Format Detection",
+    "category": "user_action_required",
+    "description": "Detect formatting errors on the provided phone number.",
+    "type": "phone_number_silent_network_authentication",
+    "reasons": {
+      "invalid_number_format": "The receiving phone number has an invalid format."
+    }
+  },
+  "phone_number_silent_network_authentication_service_available_detection": {
+    "name": "Service Available Detection",
+    "category": "user_action_required",
+    "description": "Detect if the Silent Network Authentication (SNA) vendor service is unavailable.",
+    "type": "phone_number_silent_network_authentication",
+    "reasons": {
+      "external_service_error": "An error occurred while accessing the Silent Network Authentication (SNA) service.",
+      "retry_rate_limited": "User retried silent network authentication too soon."
+    }
+  },
+  "phone_number_silent_network_authentication_sim_verified_detection": {
+    "name": "SIM Verification",
+    "category": "fraud",
+    "description": "Detect whether the phone number's SIM is verified via Silent Network Authentication (SNA).",
+    "type": "phone_number_silent_network_authentication",
+    "reasons": {
+      "invalid_code": "Silent Network Authentication (SNA) verification code is invalid.",
+      "code_not_received": "Silent Network Authentication (SNA) verification code was not received.",
+      "code_not_verified": "Silent Network Authentication (SNA) verification code could not be verified."
+    }
+  },
+  "qes_infocert_flow_completed_detection": {
+    "name": "Flow Completed",
+    "category": "user_action_required",
+    "description": "Detect if the flow has been completed successfully.",
+    "type": "qes_infocert",
+    "reasons": {
+      "external_service_error": "Failed to sign documents due to external service error.",
+      "external_flow_failed": "External flow was rejected.",
+      "signature_not_completed": "Signature flow has not been completed.",
+      "manual_review_declined": "Manual review was declined.",
+      "waiting_for_manual_review": "Waiting for manual review from external flow.",
+      "waiting_for_pocr_signature": "Waiting for user to sign POCR assertions."
+    }
+  },
+  "qes_infocert_service_available_detection": {
+    "name": "Service Available",
+    "category": "user_action_required",
+    "description": "Detect if results from the QES Infocert service are available.",
+    "type": "qes_infocert",
+    "reasons": {
+      "external_flow_error": "An error occurred accessing the Infocert service.",
+      "signature_error": "An error occurred with the signature service."
+    }
+  },
+  "selfie_account_comparison": {
+    "name": "Account comparison",
+    "category": "fraud",
+    "description": "Compare if the selfie is inconsistent with the account portrait.",
+    "type": "selfie",
+    "reasons": {
+      "face_mismatch": "The selfie is inconsistent with the portrait on the account.",
+      "missing_face": "The selfie has no face.",
+      "no_account_selfie_present": "The account has no selfie."
+    }
+  },
+  "selfie_age_comparison": {
+    "name": "Age comparison",
+    "category": "fraud",
+    "description": "Detect if the perceived age from the selfie is different from the reference age.",
+    "type": "selfie",
+    "reasons": {
+      "age_above_limit": "The age range detected in the selfie is above the age limit.",
+      "age_below_limit": "The age range detected in the selfie is below the age limit.",
+      "age_mismatch": "The reference age falls outside of the age range detected in the selfie.",
+      "no_reference_birthdate": "No reference birthdate was provided.",
+      "no_selfie_age": "No perceived age was available from the selfie.",
+      "no_selfie_age_estimation": "No perceived age estimation was available from the selfie."
+    }
+  },
+  "selfie_age_inconsistency_detection": {
+    "name": "Age inconsistency detection",
+    "category": "fraud",
+    "description": "Detect whether the perceived age from the selfie is consistent with the reference age.",
+    "type": "selfie",
+    "reasons": {
+      "inconsistent_age": "The reference age and perceived selfie age estimation are inconsistent.",
+      "inconsistent_age_adult_as_minor": "The reference age indicates a minor, but the selfie age estimation indicates an adult.",
+      "inconsistent_age_minor_as_adult": "The reference age indicates an adult, but the selfie age estimation indicates a minor.",
+      "no_reference_age": "No reference age was provided.",
+      "no_selfie_age_prediction": "No perceived age prediction was available from the selfie."
+    }
+  },
+  "selfie_age_threshold_comparison": {
+    "name": "Age threshold comparison",
+    "category": "fraud",
+    "description": "Detect if the perceived age from the selfie complies with min and/or max age limits.",
+    "type": "selfie",
+    "reasons": {
+      "age_outside_limits": "The age range detected in the selfie falls outside of configured age limits.",
+      "no_age_limits": "No min or max age limit was configured.",
+      "no_selfie_age_prediction": "No perceived age prediction was available from the selfie."
+    }
+  },
+  "selfie_attribute_comparison": {
+    "name": "Attribute comparison",
+    "category": "fraud",
+    "description": "Compare if the selfie is inconsistent with provided selfies. Generally used for verifications created outside an inquiry.",
+    "type": "selfie",
+    "reasons": {
+      "face_mismatch": "The selfie is inconsistent with the provided selfies.",
+      "no_comparison_inputs": "No selfies were provided for comparison.",
+      "no_selfie": "The submission has no selfie."
+    }
+  },
+  "selfie_custom_detection": {
+    "name": "Custom detection",
+    "category": "fraud",
+    "description": "Customizable detection",
+    "type": "selfie",
+    "reasons": {
+      "matched": "Detected a match based on configuration",
+      "not_enabled": "The verification check is not enabled."
+    }
+  },
+  "selfie_experimental_model_detection": {
+    "name": "Experimental",
+    "category": "fraud",
+    "description": "Experimental fraud checks.",
+    "type": "selfie",
+    "reasons": {
+      "match_detected": "A configured match was detected.",
+      "not_enabled": "The verification check is not enabled."
+    }
+  },
+  "selfie_face_covering_detection": {
+    "name": "Face covering",
+    "category": "user_action_required",
+    "description": "Detect if face was covered in the selfie.",
+    "type": "selfie",
+    "reasons": {
+      "face_covering_detected": "The selfie contains a person with a PPE face covering."
+    }
+  },
+  "selfie_glare_detection": {
+    "name": "Glare",
+    "category": "user_action_required",
+    "description": "Detect if the submission has glare.",
+    "type": "selfie",
+    "reasons": {
+      "too_much_glare": "The submission has glare."
+    }
+  },
+  "selfie_glasses_detection": {
+    "name": "Glasses",
+    "category": "user_action_required",
+    "description": "Detect if glasses are present.",
+    "type": "selfie",
+    "reasons": {
+      "glasses": "Glasses are detected and may interfere with selfie face detection.",
+      "sunglasses": "Sunglasses are detected and may interfere with selfie face detection."
+    }
+  },
+  "selfie_id_comparison": {
+    "name": "Selfie-to-ID comparison",
+    "category": "fraud",
+    "description": "Compare if the selfie and the face portrait in the ID are different faces.",
+    "type": "selfie",
+    "reasons": {
+      "comparison_attempt_unsuccessful": "An error has occurred that made the selfie and government ID comparison attempt fail.",
+      "face_mismatch": "The selfie and the face portrait in the ID appear to be different faces.",
+      "no_government_id": "Inquiry has no ID portrait.",
+      "no_selfie": "Inquiry has no selfie."
+    }
+  },
+  "selfie_image_quality_detection": {
+    "name": "Image quality",
+    "category": "user_action_required",
+    "description": "Detect if the submission has low image quality.",
+    "type": "selfie",
+    "reasons": {
+      "insufficient_detail": "Camera resolution or image detail is too low.",
+      "insufficient_illumination": "The submission has insufficient lighting.",
+      "excessive_illumination": "The submission is too excessively lit."
+    }
+  },
+  "selfie_liveness_detection": {
+    "name": "Selfie liveness",
+    "category": "fraud",
+    "description": "Detect if the selfie contains a live individual, not a recording, picture, or another spoof.",
+    "type": "selfie",
+    "reasons": {
+      "deepfake_detected": "The selfie appears to be a deepfake.",
+      "device_detected": "The selfie does not appear to be a live person.",
+      "emulator_detected": "The submission may have been submitted on an emulator.",
+      "gen_ai_detected": "The selfie appears to be an AI generated image.",
+      "invalid_pose": "Failed to determine selfie liveness due to inadequate image quality.",
+      "not_enabled": "Not enabled.",
+      "replica_2d_detected": "The selfie appears to be a 2d replica.",
+      "replica_detected": "The selfie has characteristics that are indicative of a spoof.",
+      "rooted_device": "The images may have been submitted on a rooted device.",
+      "unexpected_orientation": "The submission is not properly oriented.",
+      "virtual_camera_detected": "The selfie has characteristics that are indicative of virtual camera usage."
+    }
+  },
+  "selfie_multiple_faces_detection": {
+    "name": "Multiple faces",
+    "category": "fraud",
+    "description": "Detect if the selfies are different faces across poses.",
+    "type": "selfie",
+    "reasons": {
+      "center_only": "The selfie has only one pose.",
+      "disabled_face_comparison": "Face comparison is disabled.",
+      "face_conflict": "The selfies appear to be different faces across poses.",
+      "multiple_faces_detected": "The selfies has multiple faces in the frame."
+    }
+  },
+  "selfie_persona_comparison": {
+    "name": "Persona comparison",
+    "category": "fraud",
+    "description": "Compare if the selfie is inconsistent with the Reusable Persona.",
+    "type": "selfie",
+    "reasons": {
+      "face_mismatch": "The selfie and the face from the Reusable Persona appear to be different faces.",
+      "missing_persona_face": "The Reusable Persona doesn't have a face.",
+      "missing_comparison_result": "The comparison result is missing."
+    }
+  },
+  "selfie_portrait_quality_detection": {
+    "name": "Portrait quality",
+    "category": "user_action_required",
+    "description": "Detect if the face portrait is clear and in focus.",
+    "type": "selfie",
+    "reasons": {
+      "eyes_closed": "The face portrait appears to have closed eyes.",
+      "missing_face": "The selfie has no face.",
+      "portrait_not_clear": "The face portrait is unclear and out of focus."
+    }
+  },
+  "selfie_pose_detection": {
+    "name": "Pose position",
+    "category": "fraud",
+    "description": "Detect if the face in the selfies are correctly positioned across all poses.",
+    "type": "selfie",
+    "reasons": {
+      "center_only": "The selfie has only one pose.",
+      "center_pose_face_obscured": "The center selfie's face appears obscured.",
+      "face_cropped": "The selfie does not capture the entire face.",
+      "face_quality": "The selfie captured is unclear and out of focus",
+      "face_too_far": "The selfie captured was too small.",
+      "missing_yaw_angles": "Missing yaw angles.",
+      "pose_order_incorrect": "The submitted pose order was incorrect",
+      "required_poses_not_found": "The selfies appear to be incorrectly positioned in one or more poses."
+    }
+  },
+  "selfie_pose_repeat_detection": {
+    "name": "Pose repeat",
+    "category": "fraud",
+    "description": "Detect if the selfies are exact repeats across poses.",
+    "type": "selfie",
+    "reasons": {
+      "center_only": "The selfie has only one pose.",
+      "poses_repeated": "The selfies appear to repeat across poses."
+    }
+  },
+  "selfie_public_figure_detection": {
+    "name": "Public figure",
+    "category": "fraud",
+    "description": "Detect if the selfie submission matches a known public figure.",
+    "type": "selfie",
+    "reasons": {
+      "image_quality_low": "Image quality is too low for repeat detection.",
+      "missing_face": "The selfie has no face.",
+      "public_figure": "The selfie submission appears to be of a known public figure."
+    }
+  },
+  "selfie_repeat_detection": {
+    "name": "Selfie repeat",
+    "category": "fraud",
+    "description": "Detect if the selfie submission matches a selfie in another account.",
+    "type": "selfie",
+    "reasons": {
+      "image_quality_low": "Image quality is too low for repeat detection.",
+      "not_enabled": "Selfie repeat detection is not enabled.",
+      "repeat": "The selfie matches that of a previously submitted selfie on a different account.",
+      "repeat_image": "The image matches that of a previously submitted selfie on a different account."
+    }
+  },
+  "selfie_similar_background_detection": {
+    "name": "Similar background detection",
+    "category": "fraud",
+    "description": "Detect if the selfie submission has a similar background to other submissions.",
+    "type": "selfie",
+    "reasons": {
+      "not_enabled": "Similar Background Detection is not enabled.",
+      "similar_background_detected": "The selfie submission has a similar background to a previously submitted selfie."
+    }
+  },
+  "selfie_suspicious_entity_detection": {
+    "name": "Suspicious entity",
+    "category": "fraud",
+    "description": "Detect if the selfie submission is that of a government ID.",
+    "type": "selfie",
+    "reasons": {
+      "suspicious_photo": "The selfie submission appears to be a government ID."
+    }
+  },
+  "selfie_video_quality_detection": {
+    "name": "Video quality",
+    "category": "user_action_required",
+    "description": "Detect if the selfie video is high enough quality.",
+    "type": "selfie",
+    "reasons": {
+      "corrupt": "The video is corrupt.",
+      "duration_too_short": "The duration of the video was too short.",
+      "low_bit_rate": "The bit rate is too low.",
+      "low_frame_rate": "The frame rate is too low.",
+      "not_found": "There was no video uploaded."
+    }
+  },
+  "selfie_voice_detection": {
+    "name": "Voice detection",
+    "category": "user_action_required",
+    "description": "Detect if voice is present in the selfie video recording.",
+    "type": "selfie",
+    "reasons": {
+      "insufficient_audio_duration": "The audio duration is too short.",
+      "no_audio_present": "No audio was detected in the video.",
+      "no_speech_detected": "No speech was detected in the audio.",
+      "number_mismatch": "The spoken number does not match the expected number."
+    }
+  },
+  "verifiable_credential_account_comparison": {
+    "name": "Account Comparison",
+    "category": "fraud",
+    "description": "Compares claims from the verifiable credential against the account's fields.",
+    "type": "verifiable_credential",
+    "reasons": {
+      "face_mismatch": "The selfie on the verifiable credential does not match the account's selfie.",
+      "names_swapped": "The first and last names on the verifiable credential appear to be swapped compared to the account.",
+      "property_conflict": "One or more claims on the verifiable credential conflict with the account's fields."
+    }
+  },
+  "verifiable_credential_allowed_issuer_detection": {
+    "name": "Allowed Issuer",
+    "category": "fraud",
+    "description": "Validates that the verifiable credential was issued by a trusted issuer and, for Persona-issued credentials, that administrative claims such as environment and organization binding match the allowlist.",
+    "type": "verifiable_credential",
+    "reasons": {
+      "environment_mismatch": "The environment ID on the verifiable credential does not match the verification's environment.",
+      "organization_mismatch": "The organization ID on the verifiable credential does not match the expected organization.",
+      "inquiry_template_mismatch": "The inquiry template ID on the verifiable credential does not match the expected inquiry template.",
+      "issuer_untrusted": "The verifiable credential was issued by an untrusted issuer."
+    }
+  },
+  "verifiable_credential_required_claims_detection": {
+    "name": "Required Claims",
+    "category": "fraud",
+    "description": "Ensures specified claims are present in the verifiable credential payload.",
+    "type": "verifiable_credential",
+    "reasons": {
+      "claim_not_present": "One or more required claims are missing from the verifiable credential."
+    }
+  }
+}
